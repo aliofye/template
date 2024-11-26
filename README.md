@@ -2,9 +2,32 @@
 
 > \>_ Out there, it’s so breathtaking, isn’t it?
 
-1. Install:  `npm install`
-2. Hooks:    `npx lefthook install`
-3. Run:      `npm run dev`
-4. Test:     `npm run test`
-5. Coverage: `npm run coverage`
-6. Lint:     `npm run lint`
+**Install dependencies:**  
+```bash
+npm install
+```
+
+**Install git hooks**
+```bash
+npx lefthook install
+```
+
+**Run dev server**
+```bash
+npm run dev
+```
+
+**Run tests**
+```bash
+npm run test
+```
+
+**Check test coverage**
+```bash
+npm run coverage
+```
+
+**Run linter**
+```bash
+npm run lint
+```
