@@ -1,0 +1,45 @@
+{
+	# Global options block
+	admin off # Disable the admin interface
+	auto_https off # Disable automatic HTTPS in favor of Railway's managed SSL
+	log {
+		output stdout
+	}
+}
+
+:443 {
+	# Serve static files from the "dist" directory (Vite's build output)
+	root * dist
+
+	# Enable gzip and zstd compression
+	encode gzip zstd
+
+	# Cache static assets with long cache durations
+	header Cache-Control "public, max-age=31536000, immutable"
+
+	# Handle SPA routing by rewriting all paths to index.html
+	try_files {path} /index.html
+
+	# Add security headers
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+		Content-Security-Policy "default-src 'self'; font-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; script-src 'self' https://cdn.jsdelivr.net https://*.posthog.com 'unsafe-eval'; connect-src 'self' https://*.posthog.com; worker-src 'self' blob:; img-src 'self' data:;"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+	}
+
+	# Enable automatic HTTPS
+	tls {
+		issuer acme
+	}
+
+	# Logging
+	log {
+		output file /var/log/caddy/access.log
+		format json
+	}
+
+	# Static file serving
+	file_server
+}
