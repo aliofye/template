@@ -6,11 +6,11 @@ pre-commit:
   commands:
     eslint:
       run: npm run lint -- --fix
-    test:
-      run: npm run test -- --run
 
 pre-push:
   parallel: true
   commands:
+    test:
+      run: npm run test -- --run
     audit:
       run: npm audit
