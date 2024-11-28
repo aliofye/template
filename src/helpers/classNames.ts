@@ -5,4 +5,4 @@
  * @param classes - classes
  */
 
-export default (...classes: string[]) => classes.join(' ');
+export default (...classes: (string | undefined)[]) => classes.join(' ');

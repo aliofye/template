@@ -4,6 +4,8 @@
 pre-commit:
   parallel: true
   commands:
+    typecheck: 
+      run: npm run compile
     eslint:
       run: npm run lint
 

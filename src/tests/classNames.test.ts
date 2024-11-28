@@ -1,16 +1,16 @@
 import { describe, it, expect } from 'vitest';
 import classNames from '../helpers/classNames';
-import styles from '../components/ExampleComponent/ExampleComponent.module.css';
+import classes from '../components/ExampleComponent/ExampleComponent.module.css';
 
 describe('classNames', () => {
   it('should join multiple class names into a single string', () => {
-    const result = classNames(styles.red, styles.italic);
-    expect(result).toBe(`${styles.red} ${styles.italic}`);
+    const result = classNames(classes.red, classes.italic);
+    expect(result).toBe(`${classes.red} ${classes.italic}`);
   });
 
   it('should handle a single class name', () => {
-    const result = classNames(styles.red);
-    expect(result).toBe(styles.red);
+    const result = classNames(classes.red);
+    expect(result).toBe(classes.red);
   });
 
   it('should handle no class names', () => {
