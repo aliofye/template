@@ -5,7 +5,7 @@ pre-commit:
   parallel: true
   commands:
     eslint:
-      run: npm run lint -- --fix
+      run: npm run lint
 
 pre-push:
   parallel: true
