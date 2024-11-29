@@ -12,6 +12,8 @@ pre-commit:
 pre-push:
   parallel: true
   commands:
+    build:
+      run: npm run build
     test:
       run: npm run test -- --run
     audit:
