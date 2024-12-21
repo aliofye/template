@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import classNames from '../helpers/classNames';
-import classes from '../components/ExampleComponent/ExampleComponent.module.css';
+import classNames from './classNames';
+import classes from '../../components/ExampleComponent/ExampleComponent.module.css';
 
 describe('classNames', () => {
   it('should join multiple class names into a single string', () => {
