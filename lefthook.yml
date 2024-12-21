@@ -2,7 +2,6 @@
 # https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
 
 pre-commit:
-  parallel: true
   commands:
     typecheck: 
       run: npm run compile
@@ -10,11 +9,10 @@ pre-commit:
       run: npm run lint
 
 pre-push:
-  parallel: true
   commands:
     build:
       run: npm run build
     test:
-      run: npm run test -- --run
+      run: npm run test:ci
     audit:
       run: npm audit
