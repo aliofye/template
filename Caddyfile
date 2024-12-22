@@ -10,7 +10,7 @@
 :443 {
 	handle /api/* {
         uri strip_prefix /api
-        reverse_proxy localhost:3000 # Assuming your API runs on port 3000
+        reverse_proxy localhost:3000
     }
 
 	handle {
