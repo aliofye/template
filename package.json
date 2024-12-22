@@ -1,6 +1,5 @@
 {
   "private": true,
-  
   "workspaces": {
     "packages": [
       "api",
@@ -8,7 +7,7 @@
     ]
   },
   "engines": {
-    "node": ">=v20.0.0"
+    "node": ">=v18.0.0"
   },
   "scripts": {
     "dev": "concurrently \"npm run dev --prefix web\" \"npm run dev --prefix api\"",
@@ -19,8 +18,8 @@
     "test:ci": "concurrently \"npm run test:ci --prefix web\" \"npm run test:ci --prefix api\"",
     "test:coverage": "concurrently \"npm run test:coverage --prefix web\" \"npm run test:coverage --prefix api\""
   },   
-  "dependencies": {
-    "concurrently": "^9.1.0",
-    "lefthook": "^1.8.4"
+  "devDependencies": {
+    "lefthook": "^1.8.4",
+    "concurrently": "^9.1.0"
   }
 }
