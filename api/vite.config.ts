@@ -5,8 +5,8 @@ export default defineConfig({
   plugins: [
     VitePluginNode({
       adapter: 'express',
-      appPath: './src/index.ts',
-      exportName: 'api',
+      appPath: './src/server.ts',
+      exportName: 'server',
     }),
   ],
   server: {
