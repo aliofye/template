@@ -6,9 +6,6 @@
       "web"
     ]
   },
-  "engines": {
-    "node": ">=v18.0.0"
-  },
   "scripts": {
     "dev": "concurrently \"npm run dev --prefix web\" \"npm run dev --prefix api\"",
     "build": "concurrently \"npm run build --prefix web\" \"npm run build --prefix api\"",
