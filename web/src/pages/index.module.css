@@ -1,4 +1,4 @@
-.appContainer {
+.container {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -14,10 +14,16 @@
   transition: filter 300ms;
 }
 .logo:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.logo.vite:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.logo.vitest:hover {
+  filter: drop-shadow(0 0 2em #dffb61aa);
+}
+.logo.lefthook:hover {
+  filter: drop-shadow(0 0 2em #d91515aa);
 }
 
 @keyframes logo-spin {
@@ -30,13 +36,9 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+  a:nth-of-type(1) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
 }
 
 .readTheDocs {

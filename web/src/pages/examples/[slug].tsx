@@ -1,0 +1,15 @@
+import { useParams } from 'react-router-dom';
+import classes from './Examples.module.css';
+
+const Example = () => {
+  const { slug } = useParams<{ slug: string }>();
+
+  return (
+    <div className={classes.container}>
+      <h1>Example Page</h1>
+      <p>This is an example page using slug: {slug}.</p>
+    </div>
+  );
+};
+
+export default Example;

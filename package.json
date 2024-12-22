@@ -12,7 +12,8 @@
         "lint": "concurrently \"npm run lint --prefix web\" \"npm run lint --prefix api\"",
         "compile": "concurrently \"npm run compile --prefix web\" \"npm run compile --prefix api\"",
         "test": "concurrently \"npm run test --prefix web\" \"npm run test --prefix api\"",
-        "test:ci": "concurrently \"npm run test:ci --prefix web\" \"npm run test:ci --prefix api\""
+        "test:ci": "concurrently \"npm run test:ci --prefix web\" \"npm run test:ci --prefix api\"",
+        "test:coverage": "concurrently \"npm run test:coverage --prefix web\" \"npm run test:coverage --prefix api\""
     },   
     "dependencies": {
         "concurrently": "^9.1.0",

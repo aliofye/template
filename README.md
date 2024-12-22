@@ -1,4 +1,4 @@
-### React + Typescript + Vite + Vitest + Lefthook + Caddy + Nixpacks = ❤️
+### React + Vite + Vitest + Lefthook + Express = ❤️
 
 > \>_ Out there, it’s so breathtaking, isn’t it?
 
