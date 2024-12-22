@@ -1,0 +1,10 @@
+.navLinks {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background-color: #333;
+}

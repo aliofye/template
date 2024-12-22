@@ -5,9 +5,12 @@ import lefthookLogo from '/lefthook.svg';
 import classes from './index.module.css';
 import classNames from '../helpers/classNames';
 
+import Navbar from '../components/Navbar';
+
 const Home = () => {
   return (
     <div className={classes.container}>
+      <Navbar />
       <div>
         <a href="https://react.dev" target="_blank">
           <img
