@@ -9,6 +9,7 @@
 
 :443 {
   route /api/* {
+    uri strip_prefix /api
     reverse_proxy localhost:3000
   }
   route /* {
