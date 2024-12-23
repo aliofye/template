@@ -7,7 +7,7 @@ interface Message {
 
 const ExampleComponent = () => {
   const getMessage = async () => {
-    const res = await fetch(`${import.meta.env.VITE_PUBLIC_API_URL}/message`);
+    const res = await fetch(`${import.meta.env.PUBLIC_WEB_API_URL}/message`);
     return res.json();
   };
   const { data, error, loading } = useQuery<Message>('message', getMessage);

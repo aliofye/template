@@ -8,4 +8,11 @@ app.get('/message', (req, res) => {
   });
 });
 
+if (import.meta.env.PROD) {
+  const PORT = import.meta.env.PUBLIC_API_PORT;
+  app.listen(PORT, () => {
+    console.log(`Example app listening on port ${PORT}`);
+  });
+}
+
 export const server = app;
