@@ -18,4 +18,9 @@
 
 # start the backend server and caddy web server
 [start]
-    cmds = ['npm run start', 'exec caddy run --config Caddyfile --adapter caddyfile 2>&1'] # start caddy using the Caddyfile config and caddyfile adapter
+    cmd = '''
+    # Start API server in the background
+    npm run start &
+    # Start Caddy in the foreground
+    exec caddy run --config Caddyfile --adapter caddyfile 2>&1
+    '''
