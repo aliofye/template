@@ -7,6 +7,7 @@
     ]
   },
   "scripts": {
+    "start": "npm run start --prefix api",
     "dev": "concurrently \"npm run dev --prefix web\" \"npm run dev --prefix api\"",
     "build": "concurrently \"npm run build --prefix web\" \"npm run build --prefix api\"",
     "lint": "concurrently \"npm run lint --prefix web\" \"npm run lint --prefix api\"",

@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node dist/server.cjs",
     "dev": "vite",
     "build": "tsc -b && NODE_ENV=production vite build --mode production",
     "compile": "tsc -b --noEmit",
