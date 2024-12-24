@@ -13,7 +13,6 @@ RUN apt update && apt install -y caddy
 
 # Copy the Caddyfile into the container and format it
 COPY Caddyfile /etc/caddy/Caddyfile
-RUN caddy fmt --overwrite /etc/caddy/Caddyfile
 
 # Set the working directory to /app and copy your application files
 WORKDIR /app
@@ -27,7 +26,7 @@ COPY scripts/start.sh /scripts/start.sh
 RUN chmod +x /scripts/start.sh
 
 # Expose ports for the backend and Caddy server
-EXPOSE 443
+EXPOSE 80 443
 
 # Set the entry point to the start script
 ENTRYPOINT ["./scripts/start.sh"]
