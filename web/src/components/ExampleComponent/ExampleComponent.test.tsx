@@ -1,4 +1,4 @@
-import { describe, it } from 'vitest';
+import { describe, it } from 'bun:test';
 import { render, screen } from '@testing-library/react';
 import ExampleComponent from './ExampleComponent';
 

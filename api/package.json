@@ -5,17 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node dist/server.cjs",
-    "dev": "vite",
-    "build": "tsc -b && NODE_ENV=production vite build --mode production",
+    "start": "bun run ./src/server.ts",
+    "dev": "bun run ./src/server.ts --watch",
+    "build": "tsc -b",
     "compile": "tsc -b --noEmit",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "test": "vitest",
-    "test:ci": "vitest --run",
-    "test:watch": "vitest --watch",
-    "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage"
+    "test": "bun test",
+    "test:ci": "bun test --bail",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage"
   },
   "author": "",
   "license": "ISC",
@@ -24,16 +22,10 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
-    "@types/node": "^22.10.2",
-    "@vitest/coverage-v8": "^2.1.8",
-    "@vitest/ui": "^2.1.8",
+    "@types/bun": "latest",
     "eslint": "^9.17.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.18.1",
-    "vite": "^5.4.11",
-    "vite-plugin-node": "^4.0.0",
-    "vitest": "^2.1.6"
+    "typescript-eslint": "^8.18.1"
   }
 }

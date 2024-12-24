@@ -1,6 +1,6 @@
 import reactLogo from '/react.svg';
 import viteLogo from '/vite.svg';
-import vitestLogo from '/vitest.svg';
+import bunLogo from '/bun.svg';
 import lefthookLogo from '/lefthook.svg';
 import classes from './index.module.css';
 import classNames from '../helpers/classNames';
@@ -26,10 +26,10 @@ const Home = () => {
             alt="Vite logo"
           />
         </a>
-        <a href="https://vitest.dev" target="_blank">
+        <a href="https://bun.sh" target="_blank">
           <img
-            src={vitestLogo}
-            className={classNames(classes.logo, classes.vitest)}
+            src={bunLogo}
+            className={classNames(classes.logo, classes.bun)}
             alt="Vitest logo"
           />
         </a>
@@ -41,7 +41,7 @@ const Home = () => {
           />
         </a>
       </div>
-      <h1>React + Vite + Vitest + Lefthook</h1>
+      <h1>React + Vite + Bun + Lefthook</h1>
       <p>
         Edit <code>src/pages/index.tsx</code> and save to test HMR
       </p>

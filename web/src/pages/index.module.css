@@ -19,8 +19,8 @@
 .logo.vite:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-.logo.vitest:hover {
-  filter: drop-shadow(0 0 2em #dffb61aa);
+.logo.bun:hover {
+  filter: drop-shadow(0 0 2em #eaeac2aa);
 }
 .logo.lefthook:hover {
   filter: drop-shadow(0 0 2em #d91515aa);

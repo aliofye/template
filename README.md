@@ -1,4 +1,4 @@
-### React + Vite + Vitest + Lefthook + Express = ❤️
+### React + Vite + Bun + Lefthook = ❤️
 
 > \>_ Out there, it’s so breathtaking, isn’t it?
 

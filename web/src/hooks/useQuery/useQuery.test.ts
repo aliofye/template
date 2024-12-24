@@ -1,14 +1,15 @@
-import { vi, it, expect, describe, beforeEach } from 'vitest';
-import { renderHook, waitFor } from '@testing-library/react';
+import { mock, it, expect, describe, beforeEach } from 'bun:test';
+import { cleanup, renderHook, waitFor } from '@testing-library/react';
 import { useQuery } from './useQuery';
 
 describe('useQuery', () => {
   const mockData = { test: 'data' };
-  const mockFetch = vi.fn();
+  const mockFetch = mock();
 
   beforeEach(() => {
-    vi.clearAllMocks();
+    mockFetch.mockClear();
     mockFetch.mockResolvedValue(mockData);
+    cleanup();
   });
 
   it('should start in loading state', () => {

@@ -1,18 +1,25 @@
-import express from 'express';
+import { serve } from 'bun';
 
-const app = express();
+const PORT = Bun.env.PUBLIC_API_PORT || '3000';
 
-app.get('/message', (req, res) => {
-  res.send({
-    message: 'Hello, world!',
-  });
+const server = serve({
+  port: PORT,
+  fetch(req) {
+    if (req.url.endsWith('/message')) {
+      return new Response(JSON.stringify({ message: 'Hello, world!' }), {
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+    return new Response('Not Found', { status: 404 });
+  },
+  error(err) {
+    console.error('Server error:', err);
+    return new Response('Internal Server Error', { status: 500 });
+  },
 });
 
-if (import.meta.env.PROD) {
-  const PORT = import.meta.env.PUBLIC_API_PORT;
-  app.listen(PORT, () => {
-    console.log(`Example app listening on port ${PORT}`);
-  });
+if (Bun.env.PROD) {
+  console.log(`Example app listening on port ${PORT}`);
 }
 
-export const server = app;
+export default server;
