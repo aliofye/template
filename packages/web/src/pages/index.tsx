@@ -1,6 +1,7 @@
 import reactLogo from '/react.svg';
 import viteLogo from '/vite.svg';
 import bunLogo from '/bun.svg';
+import honoLogo from '/hono.svg';
 import lefthookLogo from '/lefthook.svg';
 import classes from './index.module.css';
 import classNames from '../helpers/classNames';
@@ -30,7 +31,14 @@ const Home = () => {
           <img
             src={bunLogo}
             className={classNames(classes.logo, classes.bun)}
-            alt="Vitest logo"
+            alt="Bun logo"
+          />
+        </a>
+        <a href="https://hono.dev" target="_blank">
+          <img
+            src={honoLogo}
+            className={classNames(classes.logo, classes.hono)}
+            alt="Hono logo"
           />
         </a>
         <a href="https://evilmartians.com/opensource/lefthook" target="_blank">
@@ -41,7 +49,7 @@ const Home = () => {
           />
         </a>
       </div>
-      <h1>React + Vite + Bun + Lefthook</h1>
+      <h1> = ❤️</h1>
       <p>
         Edit <code>src/pages/index.tsx</code> and save to test HMR
       </p>
