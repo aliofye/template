@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "bun run ./src/server.ts",
-    "dev": "bun run ./src/server.ts --watch",
+    "start": "NODE_ENV=production bun run src/server.ts",
+    "dev": "bun --hot run src/server.ts",
     "build": "tsc -b",
     "compile": "tsc -b --noEmit",
     "lint": "eslint .",

@@ -18,8 +18,4 @@ const server = serve({
   },
 });
 
-if (Bun.env.PROD) {
-  console.log(`Example app listening on port ${PORT}`);
-}
-
 export default server;
