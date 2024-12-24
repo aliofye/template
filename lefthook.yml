@@ -5,16 +5,14 @@ pre-commit:
   parallel: true
   commands:
     typecheck: 
-      run: npm run compile
+      run: bun run compile
     eslint:
-      run: npm run lint
+      run: bun run lint
 
 pre-push:
   parallel: true
   commands:
     build:
-      run: npm run build
+      run: bun run build
     test:
-      run: npm run test:ci
-    audit:
-      run: npm audit
+      run: bun run test:ci
