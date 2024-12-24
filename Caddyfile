@@ -14,7 +14,7 @@
 	}
 	route /* {
 		# Serve static files from the "dist" directory (Vite's build output)
-		root * web/dist
+		root * packages/web/dist
 		# Handle SPA routing by rewriting all paths to index.html
 		try_files {path} /index.html
 		# Static file serving
@@ -34,11 +34,6 @@
 		Referrer-Policy "strict-origin-when-cross-origin"
 		X-Content-Type-Options "nosniff"
 		X-Frame-Options "DENY"
-	}
-
-	# Enable automatic HTTPS
-	tls {
-		issuer acme
 	}
 
 	# Logging
