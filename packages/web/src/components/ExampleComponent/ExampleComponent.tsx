@@ -7,7 +7,8 @@ interface Message {
 
 const ExampleComponent = () => {
   const getMessage = async () => {
-    const res = await fetch(`${import.meta.env.PUBLIC_WEB_API_URL}/message`);
+    const baseUrl = import.meta.env.PUBLIC_WEB_API_URL;
+    const res = await fetch(`${baseUrl}/message`);
     return res.json();
   };
   const { data, error, loading } = useQuery<Message>('message', getMessage);
@@ -16,7 +17,7 @@ const ExampleComponent = () => {
   if (error) return <div>API Error</div>;
 
   return (
-    <div className={classNames(classes.red, classes.italic)}>
+    <div className={classNames(classes.gradient, classes.center)}>
       <h1>Example Component</h1>
       <p>Psst. the server wants to tell you: {data ? data.message : error}</p>
     </div>

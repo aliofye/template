@@ -1,8 +1,18 @@
 /* https://vite.dev/guide/features#css-modules */
-.red {
-    color: red;
+.gradient {
+  background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff6a9d, #6a85e5, #45cafc, #61d9a5);
+  background-size: 200% 200%;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 3s ease infinite;
 }
 
-.italic {
-    font-style: italic;
+.center {
+  text-align: center;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
