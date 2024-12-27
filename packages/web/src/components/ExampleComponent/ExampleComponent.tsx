@@ -7,8 +7,7 @@ interface Message {
 
 const ExampleComponent = () => {
   const getMessage = async () => {
-    const baseUrl = import.meta.env.PUBLIC_WEB_API_URL;
-    const res = await fetch(`${baseUrl}/message`);
+    const res = await fetch(`/api/message`);
     return res.json();
   };
   const { data, error, loading } = useQuery<Message>('message', getMessage);

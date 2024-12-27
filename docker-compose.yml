@@ -9,6 +9,9 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+      - /app/packages/api/node_modules
+      - /app/packages/web/node_modules
+      - /app/packages/web/dist
     environment:
       NODE_ENV: development
       PUBLIC_API_PORT: 3000
@@ -24,6 +27,9 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+      - /app/packages/api/node_modules
+      - /app/packages/web/node_modules
+      - /app/packages/web/dist
     environment:
       NODE_ENV: production
       PUBLIC_API_PORT: 3000
