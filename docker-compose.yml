@@ -1,0 +1,40 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5173:5173
+      - 3000:3000
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/packages/api/node_modules
+      - /app/packages/web/node_modules
+      - /app/packages/web/dist
+    environment:
+      NODE_ENV: development
+      PUBLIC_API_PORT: 3000
+      PUBLIC_WEB_API_URL: http://localhost:3000
+    entrypoint: ./scripts/dev.sh
+    profiles: [dev]
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5173:443
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/packages/api/node_modules
+      - /app/packages/web/node_modules
+      - /app/packages/web/dist
+    environment:
+      NODE_ENV: production
+      PUBLIC_API_PORT: 3000
+      PUBLIC_WEB_API_URL: http://localhost:5137/api
+    entrypoint: ./scripts/prod.sh
+    profiles: [prod]
+
+  

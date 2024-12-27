@@ -3,7 +3,7 @@
 # This script is only used to debug typecheck issues locally. 
 # You can ignore it or delete it.
 echo "Running TypeScript build..."
-tsc -b --noEmit
+bunx tsc -b --noEmit
 EXIT_CODE=$?
 
 if [ $EXIT_CODE -ne 0 ]; then

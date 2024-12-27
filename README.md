@@ -1,33 +1,38 @@
-### React + Vite + Vitest + Lefthook + Express = ❤️
+### React + Vite + Bun + Hono + Lefthook = ❤️
 
 > \>_ Out there, it’s so breathtaking, isn’t it?
 
-**Install dependencies:**  
+**Install dependencies**  
 ```bash
-npm install
+bun install
 ```
 
 **Install git hooks**
 ```bash
-npx lefthook install
+bunx lefthook install
 ```
 
-**Run dev server**
+**Run Container**
 ```bash
-npm run dev
+# in dev mode
+docker compose --profile dev up 
+# in prod mode
+docker compose --profile prod up
 ```
+
+## Additional Commands
 
 **Run tests**
 ```bash
-npm run test
+bun run test
 ```
 
 **Check test coverage**
 ```bash
-npm run coverage
+bun run coverage
 ```
 
 **Run linter**
 ```bash
-npm run lint
+bun run lint
 ```
