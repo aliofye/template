@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "preview": "vite preview",
-    "build": "tsc -b && NODE_ENV=production vite build --mode production",
+    "build": "vite build",
     "compile": "tsc -b --noEmit",
     "lint": "eslint .",
     "test": "bun test",

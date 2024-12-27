@@ -22,11 +22,13 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies using Bun
-RUN bun install --production
+RUN bun install
 
-# Set up a script to start both the backend and the Caddy server
-COPY scripts/prod.sh /scripts/prod.sh
-RUN chmod +x /scripts/prod.sh
+# Build the frontend
+RUN bun run build
+
+# Set up scripts directory
+COPY scripts /scripts
 
 # Expose ports for the backend and Caddy server
 EXPOSE 80 443

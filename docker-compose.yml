@@ -8,6 +8,7 @@ services:
       - 3000:3000
     volumes:
       - .:/app
+      - /app/node_modules
     environment:
       NODE_ENV: development
       PUBLIC_API_PORT: 3000
@@ -22,6 +23,7 @@ services:
       - 5173:443
     volumes:
       - .:/app
+      - /app/node_modules
     environment:
       NODE_ENV: production
       PUBLIC_API_PORT: 3000
