@@ -22,11 +22,11 @@ COPY . /app
 RUN bun install
 
 # Set up a script to start both the backend and the Caddy server
-COPY scripts/start.sh /scripts/start.sh
-RUN chmod +x /scripts/start.sh
+COPY scripts/prod.sh /scripts/prod.sh
+RUN chmod +x /scripts/prod.sh
 
 # Expose ports for the backend and Caddy server
 EXPOSE 80 443
 
 # Set the entry point to the start script
-ENTRYPOINT ["./scripts/start.sh"]
+ENTRYPOINT ["./scripts/prod.sh"]
