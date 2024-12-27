@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    // Setup local shared package
+    "paths": {
+      "@shared": ["../shared/src"]
+    },
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2020",
     "useDefineForClassFields": true,

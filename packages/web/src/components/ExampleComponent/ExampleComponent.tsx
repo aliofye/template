@@ -1,12 +1,10 @@
+import type { Message } from '@shared';
 import classes from './ExampleComponent.module.css';
 import classNames from '../../helpers/classNames';
 import { useQuery } from '../../hooks/useQuery';
-interface Message {
-  message: string;
-}
 
 const ExampleComponent = () => {
-  const getMessage = async () => {
+  const getMessage = async (): Promise<Message> => {
     const res = await fetch(`/api/message`);
     return res.json();
   };

@@ -1,4 +1,5 @@
 {
+  "name": "template",
   "private": true,
   "workspaces": ["packages/*"],
   "scripts": {
