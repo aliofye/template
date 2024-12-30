@@ -1,9 +1,8 @@
 {
   "name": "api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "type": "module",
+  "private": true,
+  "description": "Backend",
   "scripts": {
     "start": "NODE_ENV=production bun src/server.ts",
     "dev": "bun --hot src/server.ts",
@@ -15,16 +14,8 @@
     "test:watch": "bun test --watch",
     "test:coverage": "bun test --coverage"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "hono": "^4.6.14"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "eslint": "^9.17.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "typescript": "^5.7.2",
-    "typescript-eslint": "^8.18.1"
+    "hono": "^4.6.14",
+    "shared": "../shared"
   }
 }
