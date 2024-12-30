@@ -1,14 +1,9 @@
-import type { Message } from '@shared';
 import classes from './ExampleComponent.module.css';
+import { useMessage } from './ExampleComponent.queries';
 import classNames from '../../helpers/classNames';
-import { useQuery } from '../../hooks/useQuery';
 
 const ExampleComponent = () => {
-  const getMessage = async (): Promise<Message> => {
-    const res = await fetch(`/api/message`);
-    return res.json();
-  };
-  const { data, error, loading } = useQuery<Message>('message', getMessage);
+  const { data, loading, error } = useMessage();
 
   if (loading) return <></>;
   if (error) return <div>API Error</div>;
