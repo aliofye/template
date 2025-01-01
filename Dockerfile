@@ -1,7 +1,9 @@
 # Use the official Bun image as the base image
 FROM oven/bun:latest AS bun
 
-# Set node environment to production
+# Set ARGs and ENVs
+ARG PUBLIC_WEB_API_URL
+ENV PUBLIC_WEB_API_URL $PUBLIC_WEB_API_URL
 ENV NODE_ENV production
 
 # Install dependencies required for Caddy installation

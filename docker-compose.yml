@@ -36,6 +36,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        PUBLIC_WEB_API_URL: http://localhost:5173/api
     develop:
       watch:
         - action: sync+restart
@@ -59,7 +61,6 @@ services:
     environment:
       NODE_ENV: production
       PUBLIC_API_PORT: 3000
-      PUBLIC_WEB_API_URL: http://localhost:5137/api
     entrypoint: ./scripts/prod.sh
     profiles: [prod]
 
