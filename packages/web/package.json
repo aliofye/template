@@ -17,8 +17,7 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.1.0",
-    "shared": "../shared"
+    "react-router-dom": "^7.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

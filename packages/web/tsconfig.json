@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    // Setup local shared package
+    // Setup local shared packages
     "paths": {
-      "@shared": ["../shared/src"]
+      "@api": ["../api/src"],
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

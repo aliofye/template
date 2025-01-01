@@ -1,10 +1,13 @@
-import type { Message } from '@shared';
+import type { AppType } from '@api';
+import { hc } from 'hono/client';
 import { useQuery } from '../../hooks/useQuery';
 
+const client = hc<AppType>(import.meta.env.PUBLIC_WEB_API_URL);
+
 export const useMessage = () => {
-  const getMessage = async (): Promise<Message> => {
-    const res = await fetch(`${import.meta.env.PUBLIC_WEB_API_URL}/message`);
+  const getMessage = async () => {
+    const res = await client.message.$get();
     return res.json();
   };
-  return useQuery<Message>('message', getMessage);
+  return useQuery('message', getMessage);
 };
