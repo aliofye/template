@@ -15,9 +15,9 @@ bunx lefthook install
 **Run Container**
 ```bash
 # in dev mode
-docker compose --profile dev up 
+docker compose --profile dev up --watch
 # in prod mode
-docker compose --profile prod up --build
+docker compose --profile prod up --watch
 ```
 
 ## Additional Commands

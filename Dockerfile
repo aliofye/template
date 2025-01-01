@@ -19,7 +19,9 @@ COPY Caddyfile /etc/caddy/Caddyfile
 
 # Set the working directory to /app and copy your application files
 WORKDIR /app
-COPY . /app
+COPY ./packages ./packages
+COPY ./bun.lockb ./bun.lockb
+COPY ./package.json ./package.json
 
 # Install dependencies using Bun
 RUN bun install

@@ -3,15 +3,29 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    develop:
+      watch:
+        - action: sync
+          path: ./packages/shared
+          target: /app/packages/shared
+          ignore:
+            - node_modules/
+        - action: sync
+          path: ./packages/api
+          target: /app/packages/api
+          ignore:
+            - node_modules/
+        - action: sync
+          path: ./packages/web
+          target: /app/packages/web
+          ignore:
+            - node_modules/
+            - dist/
     ports:
       - 5173:5173
       - 3000:3000
     volumes:
-      - .:/app
-      - /app/node_modules
-      - /app/packages/api/node_modules
-      - /app/packages/web/node_modules
-      - /app/packages/web/dist
+      - ./scripts:/app/scripts
     environment:
       NODE_ENV: development
       PUBLIC_API_PORT: 3000
@@ -22,14 +36,26 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./Caddyfile
+          target: /etc/caddy/Caddyfile
+        - action: sync+restart
+          path: ./packages/api
+          target: /app/packages/api
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: ./packages/web
+          target: /app/packages/web
+          ignore:
+            - node_modules/
+            - dist/
     ports:
       - 5173:443
     volumes:
-      - .:/app
-      - /app/node_modules
-      - /app/packages/api/node_modules
-      - /app/packages/web/node_modules
-      - /app/packages/web/dist
+      - ./scripts:/app/scripts
     environment:
       NODE_ENV: production
       PUBLIC_API_PORT: 3000
