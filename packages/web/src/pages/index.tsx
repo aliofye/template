@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className={classes.container}>
       <Navbar />
-      <div>
+      <div className={classes.logoContainer}>
         <a href="https://react.dev" target="_blank">
           <img
             src={reactLogo}

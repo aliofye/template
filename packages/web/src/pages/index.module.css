@@ -7,6 +7,12 @@
   flex-direction: column;
 }
 
+.logoContainer {
+  display: flex;
+  padding: 2em;
+  flex-wrap: wrap;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
