@@ -17,7 +17,7 @@ bunx lefthook install
 # in dev mode
 docker compose --profile dev up 
 # in prod mode
-docker compose --profile prod up
+docker compose --profile prod up --build
 ```
 
 ## Additional Commands
