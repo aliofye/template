@@ -24,8 +24,6 @@ services:
     ports:
       - 5173:5173
       - 3000:3000
-    volumes:
-      - ./scripts:/app/scripts
     environment:
       NODE_ENV: development
       PUBLIC_API_PORT: 3000
@@ -56,8 +54,6 @@ services:
             - dist/
     ports:
       - 5173:443
-    volumes:
-      - ./scripts:/app/scripts
     environment:
       NODE_ENV: production
       PUBLIC_API_PORT: 3000

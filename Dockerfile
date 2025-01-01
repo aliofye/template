@@ -21,18 +21,16 @@ COPY Caddyfile /etc/caddy/Caddyfile
 
 # Set the working directory to /app and copy your application files
 WORKDIR /app
-COPY ./packages ./packages
-COPY ./bun.lockb ./bun.lockb
-COPY ./package.json ./package.json
+COPY packages ./packages
+COPY scripts ./scripts
+COPY bun.lockb ./bun.lockb
+COPY package.json ./package.json
 
 # Install dependencies using Bun
 RUN bun install
 
 # Build the frontend
 RUN bun run build
-
-# Set up scripts directory
-COPY scripts /scripts
 
 # Expose ports for the backend and Caddy server
 EXPOSE 80 443
