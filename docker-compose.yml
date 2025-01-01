@@ -6,11 +6,6 @@ services:
     develop:
       watch:
         - action: sync
-          path: ./packages/shared
-          target: /app/packages/shared
-          ignore:
-            - node_modules/
-        - action: sync
           path: ./packages/api
           target: /app/packages/api
           ignore:

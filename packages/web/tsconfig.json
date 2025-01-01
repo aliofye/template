@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    // Setup local shared packages
     "paths": {
       "@api": ["../api/src"],
     },

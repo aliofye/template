@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-    // Setup local shared package
-    "paths": {
-      "@shared": ["../shared/src"]
-    },
     // Enable latest features
     "lib": ["ESNext", "DOM"],
     "target": "ESNext",
