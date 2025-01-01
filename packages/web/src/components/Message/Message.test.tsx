@@ -1,10 +1,10 @@
 import { describe, it } from 'bun:test';
 import { render, screen } from '@testing-library/react';
-import ExampleComponent from './ExampleComponent';
+import Message from './Message';
 
-describe('ExampleComponent', () => {
+describe('Message', () => {
   it('Renders the component', () => {
-    render(<ExampleComponent />);
+    render(<Message />);
     screen.debug();
   });
 });

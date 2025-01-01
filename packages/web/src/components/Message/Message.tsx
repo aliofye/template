@@ -1,8 +1,8 @@
-import classes from './ExampleComponent.module.css';
-import { useMessage } from './ExampleComponent.queries';
+import classes from './Message.module.css';
+import { useMessage } from './Message.queries';
 import classNames from '../../helpers/classNames';
 
-const ExampleComponent = () => {
+const Message = () => {
   const { data, loading, error } = useMessage();
 
   if (loading) return <></>;
@@ -10,10 +10,10 @@ const ExampleComponent = () => {
 
   return (
     <div className={classNames(classes.gradient, classes.center)}>
-      <h1>Example Component</h1>
+      <h1>Message</h1>
       <p>Psst. the server wants to tell you: {data ? data.message : error}</p>
     </div>
   );
 };
 
-export default ExampleComponent;
+export default Message;

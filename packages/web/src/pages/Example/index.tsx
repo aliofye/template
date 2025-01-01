@@ -1,5 +1,5 @@
 import classes from './Example.module.css';
-import ExampleComponent from '../../components/ExampleComponent';
+import Message from '../../components/Message';
 import Navbar from '../../components/Navbar';
 
 const Example = () => {
@@ -8,7 +8,7 @@ const Example = () => {
       <Navbar />
       <h1>Example Page</h1>
       <p>This is an example page.</p>
-      <ExampleComponent />
+      <Message />
     </div>
   );
 };
