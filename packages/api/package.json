@@ -4,8 +4,8 @@
   "private": true,
   "description": "Backend",
   "scripts": {
-    "start": "NODE_ENV=production bun src/server.ts",
-    "dev": "bun --hot src/server.ts",
+    "start": "NODE_ENV=production bun src/app.ts",
+    "dev": "bun --hot src/app.ts",
     "build": "tsc -b",
     "compile": "tsc -b --noEmit",
     "lint": "eslint .",
