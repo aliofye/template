@@ -9,6 +9,7 @@ const Navbar = () => {
         <Link to="/example">Example</Link>
         <Link to="/examples/slug">Slug Example</Link>
         <Link to="/non-existing-slug">Invalid Route</Link>
+        <Link to="/docs">Docs</Link>
       </div>
     </nav>
   );

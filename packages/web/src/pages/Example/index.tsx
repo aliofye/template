@@ -4,11 +4,13 @@ import Navbar from '../../components/Navbar';
 
 const Example = () => {
   return (
-    <div className={classes.container}>
+    <div>
       <Navbar />
-      <h1>Example Page</h1>
-      <p>This is an example page.</p>
-      <Message />
+      <div className={classes.container}>
+        <h1>Example Page</h1>
+        <p>This is an example page.</p>
+        <Message />
+      </div>
     </div>
   );
 };

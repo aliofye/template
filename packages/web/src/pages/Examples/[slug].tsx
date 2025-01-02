@@ -6,10 +6,12 @@ const Example = () => {
   const { slug } = useParams<{ slug: string }>();
 
   return (
-    <div className={classes.container}>
+    <div>
       <Navbar />
-      <h1>Example Page</h1>
-      <p>This is an example page using slug: {slug}.</p>
+      <div className={classes.container}>
+        <h1>Example Page</h1>
+        <p>This is an example page using slug: {slug}.</p>
+      </div>
     </div>
   );
 };

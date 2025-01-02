@@ -1,0 +1,80 @@
+.sections {
+  height: 100svh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+  scroll-snap-align: start;
+  width: 100vw;
+}
+
+.logoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 100%;
+  padding: 2em;
+}
+
+.logo {
+  height: 6em;
+  max-width: 100%;
+  object-fit: contain;
+  padding: 1.5em;
+  transition: filter 300ms;
+  will-change: filter;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.logo.vite:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.bun:hover {
+  filter: drop-shadow(0 0 2em #eaeac2aa);
+}
+
+.logo.hono:hover {
+  filter: drop-shadow(0 0 2em #c87b0eaa);
+}
+
+.logo.lefthook:hover {
+  filter: drop-shadow(0 0 2em #d91515aa);
+}
+
+.logo.docker:hover {
+  filter: drop-shadow(0 0 2em #0db7edaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.readTheDocs {
+  color: #888;
+}

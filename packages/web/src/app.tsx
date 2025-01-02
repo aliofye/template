@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './routes';
 
-import './root.css';
+import './app.css';
 
 const rootElement = document.getElementById('root');
 if (rootElement) {

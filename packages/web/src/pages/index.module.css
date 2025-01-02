@@ -1,80 +1,38 @@
 .container {
-  height: 100svh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-
-section {
   align-items: center;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 100svh;
+  height: 100vh;
   justify-content: center;
-  overflow: hidden;
-  padding: 10px;
-  scroll-snap-align: start;
   width: 100vw;
 }
 
-.logoContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem; /* Add this for spacing between logos */
-  justify-content: center; /* Add this */
-  max-width: 100%; /* Add this */
-  padding: 2em;
+.gradient {
+  animation: gradient-shift 3s ease infinite;
+  background: linear-gradient(
+    90deg,
+    #ff7eb3,
+    #ff758c,
+    #ff6a9d,
+    #6a85e5,
+    #45cafc,
+    #61d9a5
+  );
+  background-clip: text;
+  background-size: 200% 200%;
+  color: transparent;
 }
 
-.logo {
-  height: 6em;
-  max-width: 100%; /* Add this */
-  object-fit: contain; /* Add this */
-  padding: 1.5em;
-  transition: filter 300ms;
-  will-change: filter;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-.logo.vite:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.bun:hover {
-  filter: drop-shadow(0 0 2em #eaeac2aa);
-}
-
-.logo.hono:hover {
-  filter: drop-shadow(0 0 2em #c87b0eaa);
-}
-
-.logo.lefthook:hover {
-  filter: drop-shadow(0 0 2em #d91515aa);
-}
-
-.logo.docker:hover {
-  filter: drop-shadow(0 0 2em #0db7edaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
   }
 
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-position: 100% 50%;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  100% {
+    background-position: 0% 50%;
   }
-}
-
-.readTheDocs {
-  color: #888;
 }
