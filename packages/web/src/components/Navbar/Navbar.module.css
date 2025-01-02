@@ -1,17 +1,13 @@
 .navLinks {
+  background-color: #000;
   display: flex;
-  width: 100%;
   gap: 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index:100;
   padding: 10px;
-  background-color: #000000;
+  width: 100%;
 }
 
 @media (prefers-color-scheme: light) {
   .navLinks {
-    background-color: #ffffff;
+    background-color: #fff;
   }
 }

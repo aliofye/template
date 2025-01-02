@@ -4,9 +4,9 @@
 pre-commit:
   parallel: true
   commands:
-    typecheck: 
+    compile: 
       run: bun run compile
-    eslint:
+    lint:
       run: bun run lint
 
 pre-push:

@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "build": "vite build",
     "compile": "tsc -b --noEmit",
-    "lint": "eslint .",
+    "lint": "eslint . && stylelint **/*.css",
     "test": "bun test",
     "test:ci": "bun test --bail",
     "test:watch": "bun test --watch",
@@ -34,6 +34,9 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
     "jsdom": "^25.0.1",
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-prettier": "^5.0.2",
     "vite": "^5.4.11"
   }
 }
