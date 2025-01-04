@@ -4,7 +4,7 @@
   "private": true,
   "description": "Frontend",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
     "preview": "vite preview",
     "build": "vite build",
     "compile": "tsc -b --noEmit",
