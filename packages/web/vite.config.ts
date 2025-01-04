@@ -13,5 +13,9 @@ export default defineConfig(({ mode }) => {
     define: {
       PUBLIC_WEB_API_URL: JSON.stringify(env.PUBLIC_WEB_API_URL),
     },
+    server: {
+      port: 5173,
+      host: true,
+    },
   };
 });
