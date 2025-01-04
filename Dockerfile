@@ -36,4 +36,4 @@ RUN bun run build
 EXPOSE 80 443
 
 # Set the entry point to the start script
-ENTRYPOINT ["./scripts/prod.sh"]
+ENTRYPOINT ["./scripts/prod-entrypoint.sh"]
