@@ -1,20 +1,22 @@
 .sections {
-  height: 100svh;
-  overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100svh;
 }
 
 section {
-  align-items: center;
-  box-sizing: border-box;
+  scroll-snap-align: start;
+
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100svh;
+  align-items: center;
   justify-content: center;
-  overflow: hidden;
-  padding: 10px;
-  scroll-snap-align: start;
+
+  box-sizing: border-box;
   width: 100vw;
+  height: 100svh;
+  padding: 10px;
 }
 
 .logoContainer {
@@ -22,17 +24,21 @@ section {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+
   max-width: 100%;
   padding: 2em;
 }
 
 .logo {
-  height: 6em;
-  max-width: 100%;
-  object-fit: contain;
-  padding: 1.5em;
-  transition: filter 300ms;
   will-change: filter;
+
+  max-width: 100%;
+  height: 6em;
+  padding: 1.5em;
+
+  object-fit: contain;
+
+  transition: filter 300ms;
 }
 
 .logo:hover {
