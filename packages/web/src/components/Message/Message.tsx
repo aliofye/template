@@ -9,7 +9,7 @@ const Message = () => {
   if (error) return <div>API Error</div>;
 
   return (
-    <div className={classNames(classes.gradient, classes.center)}>
+    <div className={classNames('gradient', classes.center)}>
       <h1>Message</h1>
       <code>API URL: {import.meta.env.PUBLIC_WEB_API_URL}</code>
       <p>Psst. the server wants to tell you: {data ? data.message : error}</p>

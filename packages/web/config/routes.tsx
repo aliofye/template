@@ -1,18 +1,19 @@
 /**
  * This file sets up file-based routing using vite and react-router-dom.
  */
+
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 // Dynamically import all files in the "pages" directory
-const pages = import.meta.glob('./pages/**/*.tsx');
+const pages = import.meta.glob(`../src/pages/**/*.tsx`);
 
 // Transform file paths into routes
 const getRoutes = () => {
   // Dynamic routes
   const routes = Object.keys(pages).map((path) => {
     const routePath = path
-      .replace('./pages', '') // Remove the "pages" prefix
+      .replace('../src/pages', '') // Remove the "pages" prefix
       .replace(/\/index\.tsx$/, '') // Remove "/index" for folder-based routing
       .replace(/\.tsx$/, '') // Remove ".tsx"
       .replace(/\[([^/]+)\]/g, ':$1'); // Convert dynamic segments
@@ -28,7 +29,7 @@ const getRoutes = () => {
   // Fallback route
   routes.push({
     path: '*',
-    Component: React.lazy(() => import('./pages/NotFound/index.tsx')),
+    Component: React.lazy(() => import(`../src/pages/404`)),
   });
 
   return routes;

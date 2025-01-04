@@ -6,9 +6,10 @@ const Navbar = () => {
     <nav>
       <div className={classes.navLinks}>
         <Link to="/">Home</Link>
-        <Link to="/example">Example</Link>
-        <Link to="/examples/slug">Slug Example</Link>
-        <Link to="/non-existing-slug">Invalid Route</Link>
+        <Link to="/example">ServerExample</Link>
+        <Link to="/example/nestedexample">NestedExample</Link>
+        <Link to="/examples/slug">SlugExample</Link>
+        <Link to="/non-existing-slug">InvalidRoute</Link>
         <Link to="/docs">Docs</Link>
       </div>
     </nav>

@@ -1,4 +1,4 @@
-import classes from './NotFound.module.css';
+import classes from './404.module.css';
 import Navbar from '../../components/Navbar';
 
 const NotFound = () => {
@@ -6,7 +6,7 @@ const NotFound = () => {
     <div>
       <Navbar />
       <div className={classes.container}>
-        <h1>404</h1>
+        <h1 className="gradient">404</h1>
         <p>The page you are looking for does not exist.</p>
       </div>
     </div>

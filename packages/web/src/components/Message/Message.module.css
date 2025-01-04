@@ -1,34 +1,3 @@
-/* https://vite.dev/guide/features#css-modules */
-.gradient {
-  animation: gradient-shift 3s ease infinite;
-  background: linear-gradient(
-    90deg,
-    #ff7eb3,
-    #ff758c,
-    #ff6a9d,
-    #6a85e5,
-    #45cafc,
-    #61d9a5
-  );
-  background-clip: text;
-  background-size: 200% 200%;
-  color: transparent;
-}
-
 .center {
   text-align: center;
-}
-
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
 }
