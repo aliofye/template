@@ -1,21 +1,24 @@
 #root {
-  background-color: #000;
-  color: rgb(255 255 255 / 87%);
-  color-scheme: light dark;
+  width: 100%;
+  height: 100%;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-synthesis: none;
-  font-weight: 400;
-  height: 100%;
   line-height: 1.5;
+  color: rgb(255 255 255 / 87%);
   text-rendering: optimizelegibility;
-  width: 100%;
+
+  color-scheme: light dark;
+  background-color: #000;
+
+  font-synthesis: none;
 }
 
 a {
-  color: #646cff;
   font-weight: 500;
+  color: #646cff;
   text-decoration: inherit;
 }
 
@@ -24,13 +27,15 @@ a:hover {
 }
 
 body {
-  background-color: #000;
   display: flex;
-  margin: 0;
-  min-height: 100vh;
-  min-width: 320px;
-  padding: 0;
   place-items: center;
+
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  background-color: #000;
 }
 
 h1 {
@@ -41,8 +46,8 @@ h1 {
 @media (prefers-color-scheme: light) {
   #root,
   body {
-    background-color: #fff;
     color: #213547;
+    background-color: #fff;
   }
 
   a:hover {
@@ -55,7 +60,8 @@ h1 {
 */
 
 .gradient {
-  animation: gradient-shift 3s ease infinite;
+  color: transparent;
+
   background: linear-gradient(
     90deg,
     #ff7eb3,
@@ -67,7 +73,8 @@ h1 {
   );
   background-clip: text;
   background-size: 200% 200%;
-  color: transparent;
+
+  animation: gradient-shift 3s ease infinite;
 }
 
 @keyframes gradient-shift {

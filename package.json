@@ -7,6 +7,7 @@
     "dev": "bun run --filter '*' dev",
     "build": "bun run --filter '*' build",
     "lint": "bun run --filter '*' lint",
+    "lint:fix": "bun run --filter '*' lint:fix",
     "compile": "bun run --filter '*' compile",
     "test": "bun run --filter '*' test",
     "test:ci": "bun run --filter '*' test:ci",
