@@ -23,7 +23,7 @@ services:
       NODE_ENV: development
       PUBLIC_API_PORT: 3000
       PUBLIC_WEB_API_URL: http://localhost:3000
-    entrypoint: ./scripts/dev.sh
+    entrypoint: ./scripts/dev-entrypoint.sh
     profiles: [dev]
   prod:
     build:
@@ -52,7 +52,7 @@ services:
     environment:
       NODE_ENV: production
       PUBLIC_API_PORT: 3000
-    entrypoint: ./scripts/prod.sh
+    entrypoint: ./scripts/prod-entrypoint.sh
     profiles: [prod]
 
   
