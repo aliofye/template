@@ -7,7 +7,6 @@ class MessageService {
   }
 
   async getMessage(): Promise<Message | undefined> {
-    await this.messageRepository.insertMessage({ text: 'Hello, World!' });
     return this.messageRepository.getMessage();
   }
 
