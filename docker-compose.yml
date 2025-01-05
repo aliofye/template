@@ -1,4 +1,17 @@
 services:
+  db:
+    image: postgres:latest
+    logging:
+      driver: none
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - 5432:5432
+    profiles: [dev, prod]
   dev:
     build:
       context: .
@@ -23,6 +36,7 @@ services:
       NODE_ENV: development
       PUBLIC_API_PORT: 3000
       PUBLIC_WEB_API_URL: http://localhost:3000
+      DATABASE_URL: postgres://postgres:postgres@db:5432/postgres
     entrypoint: ./scripts/dev-entrypoint.sh
     profiles: [dev]
   prod:
@@ -52,6 +66,7 @@ services:
     environment:
       NODE_ENV: production
       PUBLIC_API_PORT: 3000
+      DATABASE_URL: postgres://postgres:postgres@db:5432/postgres
     entrypoint: ./scripts/prod-entrypoint.sh
     profiles: [prod]
 

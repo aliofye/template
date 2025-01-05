@@ -21,7 +21,6 @@
     "react-router-dom": "^7.1.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
     "@happy-dom/global-registrator": "^15.11.7",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",

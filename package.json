@@ -11,6 +11,7 @@
     "compile": "bun run --filter '*' compile",
     "test": "bun run --filter '*' test",
     "test:ci": "bun run --filter '*' test:ci",
+    "test:watch": "bun run --filter '*' test:watch",
     "test:coverage": "bun run --filter '*' test:coverage"
   },
   "devDependencies": {
