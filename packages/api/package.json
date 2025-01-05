@@ -15,7 +15,8 @@
     "test:coverage": "bun test --coverage",
     "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "db:seed": "bun ./src/db/seed.ts"
   },
   "dependencies": {
     "drizzle-orm": "^0.38.3",

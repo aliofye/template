@@ -35,19 +35,26 @@ docker compose --profile dev up --watch
 # Works on your machine? Doesn't work on prod? This is your command
 docker compose --profile prod up --watch
 ```
+
 ### Push database changes
 ```bash
-docker compose exec ${dev|prod} bun run db:push
+docker compose exec -w /app/packages/api ${dev|prod} bun run db:push
 ```
+
+### Seed database with test data
+```bash
+docker compose exec -w /app/packages/api ${dev|prod} bun run db:seed
+```
+
 ## Database helpers
 ### Generate database migration
 ```bash
-docker compose exec ${dev|prod} bun run db:generate
+docker compose exec -w /app/packages/api ${dev|prod} bun run db:generate
 ```
 
 ### Run database migration
 ```bash
-docker compose exec ${dev|prod} bun run db:migrate
+docker compose exec -w /app/packages/api ${dev|prod} bun run db:migrate
 ```
 
 ## Running Tests
