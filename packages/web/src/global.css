@@ -90,3 +90,34 @@ h1 {
     background-position: 0% 50%;
   }
 }
+
+input {
+  width: 100%;
+
+  font-size: 1.5em;
+  color: rgb(255 255 255 / 87%);
+
+  background-color: rgba(45, 45, 45, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+
+  transition: border-color 0.25s ease;
+}
+
+@media (prefers-color-scheme: light) {
+  #root,
+  body {
+    color: #213547;
+    background-color: #fff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  input {
+    color: #213547;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+}
