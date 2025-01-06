@@ -1,5 +1,5 @@
-# Refer for explanation to following link:
-# https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+# This is a file to configure git hooks on commit and push.
+# Read: https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
 
 pre-commit:
   parallel: true
@@ -13,6 +13,6 @@ pre-push:
   parallel: true
   commands:
     build:
-      run: bun run build
+      run: docker compose exec dev bun run build
     test:
-      run: bun run test:ci
+      run: docker compose exec dev bun run test:ci
