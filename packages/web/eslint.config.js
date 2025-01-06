@@ -25,7 +25,6 @@ export default tseslint.config(
     rules: {
       ...tseslint.configs.strict.rules,
       ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/jsx-no-target-blank': 'off',
@@ -33,6 +32,7 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      ...reactHooks.configs.recommended.rules,
       ...jsxa11y.configs.recommended.rules,
       ...prettier.configs.recommended.rules,
       'prettier/prettier': [
