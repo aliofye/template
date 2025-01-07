@@ -38,48 +38,48 @@ docker compose --profile prod up --watch
 
 ### Push database changes
 ```bash
-docker compose exec -w /app/packages/api ${dev|prod} bun run db:push
+docker compose exec -w /app/packages/api dev bun run db:push
 ```
 
 ### Seed database with test data
 ```bash
-docker compose exec -w /app/packages/api ${dev|prod} bun run db:seed
+docker compose exec -w /app/packages/api dev bun run db:seed
 ```
 
 ## Database helpers
 ### Generate database migration
 ```bash
-docker compose exec -w /app/packages/api ${dev|prod} bun run db:generate
+docker compose exec -w /app/packages/api dev bun run db:generate
 ```
 
 ### Run database migration
 ```bash
-docker compose exec -w /app/packages/api ${dev|prod} bun run db:migrate
+docker compose exec -w /app/packages/api dev bun run db:migrate
 ```
 
 ## Running Tests
 ### Run `api`+`web` tests
 ```bash
-docker compose exec ${dev|prod} bun run test
+docker compose exec dev bun run test
 ```
 
 ### Run `api` tests only
 ```bash
-docker compose exec -w /app/packages/api ${dev|prod} bun run test --watch
+docker compose exec -w /app/packages/api dev bun run test --watch
 ```
 
 ### Run `web` tests only
 ```bash
-docker compose exec -w /app/packages/web ${dev|prod} bun run test --watch
+docker compose exec -w /app/packages/web dev bun run test --watch
 ```
 
 ### Check test coverage
 ```bash
-docker compose exec ${dev|prod} bun run coverage
+docker compose exec dev bun run coverage
 ```
 
 ## Linting
 ### Lint everything
 ```bash
-docker compose exec ${dev|prod} bun run lint
+docker compose exec dev bun run lint
 ```

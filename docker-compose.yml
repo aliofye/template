@@ -1,8 +1,6 @@
 services:
   db:
     image: postgres:latest
-    logging:
-      driver: none
     restart: always
     shm_size: 128mb
     environment:
@@ -11,6 +9,20 @@ services:
       POSTGRES_DB: postgres
     ports:
       - 5432:5432
+    profiles: [dev, prod]
+    volumes:
+      - db:/var/lib/postgresql/data
+  testdb:
+    image: postgres:latest
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: postgres
+      PGPORT: 5433
+    ports:
+      - 5433:5433
     profiles: [dev, prod]
   dev:
     build:
@@ -37,6 +49,7 @@ services:
       PUBLIC_API_PORT: 3000
       PUBLIC_WEB_API_URL: http://localhost:3000
       DATABASE_URL: postgres://postgres:postgres@db:5432/postgres
+      TEST_DATABASE_URL: postgres://test:test@testdb:5433/postgres
     entrypoint: ./scripts/dev-entrypoint.sh
     profiles: [dev]
   prod:
@@ -69,5 +82,6 @@ services:
       DATABASE_URL: postgres://postgres:postgres@db:5432/postgres
     entrypoint: ./scripts/prod-entrypoint.sh
     profiles: [prod]
-
+volumes:
+  db:
   
