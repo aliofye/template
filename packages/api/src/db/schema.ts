@@ -4,6 +4,11 @@
  */
 
 import { pgTable, uuid, timestamp, varchar } from 'drizzle-orm/pg-core';
+import {
+  createSelectSchema,
+  createInsertSchema,
+  createUpdateSchema,
+} from 'drizzle-zod';
 import { sql } from 'drizzle-orm';
 
 export const messagesTable = pgTable('messages', {
@@ -15,3 +20,7 @@ export const messagesTable = pgTable('messages', {
   updated_at: timestamp('updated_at').default(sql`now()`),
   deleted_at: timestamp('deleted_at').default(sql`null`),
 });
+
+export const MessageSelectSchema = createSelectSchema(messagesTable);
+export const MessageInsertSchema = createInsertSchema(messagesTable);
+export const MessageUpdateSchema = createUpdateSchema(messagesTable);
