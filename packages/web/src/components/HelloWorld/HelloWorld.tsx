@@ -3,11 +3,11 @@ import classNames from '../../helpers/classNames';
 import { useQuery } from '../../hooks/useQuery';
 import { useMutation } from '../../hooks/useMutation';
 
-import classes from './Message.module.css';
-import { getMessage } from './Message.queries';
-import { createMessage } from './Message.mutations';
+import classes from './HelloWorld.module.css';
+import { getMessage } from './HelloWorld.queries';
+import { createMessage } from './HelloWorld.mutations';
 
-const Message = () => {
+const HelloWorld = () => {
   const [text, setText] = useState('');
 
   const getMessageQuery = useQuery('message', getMessage);
@@ -46,4 +46,4 @@ const Message = () => {
   );
 };
 
-export default Message;
+export default HelloWorld;

@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import classes from './Examples.module.css';
+import classes from './SlugExample.module.css';
 import Navbar from '../../components/Navbar';
 
 const Example = () => {
@@ -9,7 +9,7 @@ const Example = () => {
     <div>
       <Navbar />
       <div className={classes.container}>
-        <h1>Example Page</h1>
+        <h1>Slug Example Page</h1>
         <p>This is an example page using slug: {slug}.</p>
       </div>
     </div>
