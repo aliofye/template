@@ -2,12 +2,13 @@
  * This script is used to seed the database with initial data.
  * You can add more data to seed the database with.
  */
+
 import clear from './clear';
-import MessageRepository from '../modules/message/message.repository';
+import HelloWorldRepository from '../modules/helloworld/helloworld.repository';
 
 const run = async (): Promise<void> => {
   try {
-    await MessageRepository.insertMessage({ text: 'Hello, World!' });
+    await HelloWorldRepository.insert({ text: 'Hello, World!' });
     console.log('Seeded database!');
     process.exit(0);
   } catch (error) {

@@ -3,24 +3,31 @@
  * Read: https://orm.drizzle.team/docs/sql-schema-declaration
  */
 
-import { pgTable, uuid, timestamp, varchar } from 'drizzle-orm/pg-core';
+import { pgTable, uuid, varchar } from 'drizzle-orm/pg-core';
 import {
   createSelectSchema,
   createInsertSchema,
   createUpdateSchema,
 } from 'drizzle-zod';
 import { sql } from 'drizzle-orm';
+import { timestamps } from './helpers';
 
-export const messagesTable = pgTable('messages', {
+/**
+ * This is an example table.
+ * Feel free to delete it and the migration under api/drizzle to start fresh
+ */
+export const helloWorldTable = pgTable('hello_world', {
   id: uuid('id')
     .default(sql`gen_random_uuid()`)
     .primaryKey(),
   text: varchar({ length: 255 }).notNull(),
-  created_at: timestamp('created_at').default(sql`now()`),
-  updated_at: timestamp('updated_at').default(sql`now()`),
-  deleted_at: timestamp('deleted_at').default(sql`null`),
+  ...timestamps,
 });
 
-export const MessageSelectSchema = createSelectSchema(messagesTable);
-export const MessageInsertSchema = createInsertSchema(messagesTable);
-export const MessageUpdateSchema = createUpdateSchema(messagesTable);
+/**
+ * Export zod schemas for validation on routes
+ * Read: https://orm.drizzle.team/docs/zod
+ */
+export const HelloWorldSelectSchema = createSelectSchema(helloWorldTable);
+export const HelloWorldInsertSchema = createInsertSchema(helloWorldTable);
+export const HelloWorldUpdateSchema = createUpdateSchema(helloWorldTable);

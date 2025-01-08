@@ -1,14 +1,16 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/**
+ * This file is where you setup your module routes
+ * It is also the entry point to your API.
+ * Read: https://hono.dev/docs/guides/best-practices#building-a-larger-application
+ */
+
 import { Hono } from 'hono';
-import health from './modules/health';
-import message from './modules/message';
+import helloworld from './modules/helloworld';
 
 const app = new Hono();
 
-const routes = app
-  .route('/', health)
-  .route('/health', health)
-  .route('/message', message);
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const routes = app.route('/helloworld', helloworld);
 
 export default {
   port: Bun.env.PUBLIC_API_PORT || 3000,

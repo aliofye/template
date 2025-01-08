@@ -1,5 +1,5 @@
-import classes from './Example.module.css';
-import Message from '../../components/Message';
+import classes from './ServerExample.module.css';
+import Message from '../../components/HelloWorld';
 import Navbar from '../../components/Navbar';
 
 const Example = () => {
@@ -7,7 +7,7 @@ const Example = () => {
     <div>
       <Navbar />
       <div className={classes.container}>
-        <h1>Example Page</h1>
+        <h1>Server Example Page</h1>
         <p>This is an example page.</p>
         <Message />
       </div>

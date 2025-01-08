@@ -3,7 +3,7 @@
 > \>_ Out there, it’s so breathtaking, isn’t it?
 
 ## Quick Start
-### Install applications
+### Prerequisites
 
 [Install Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
@@ -34,16 +34,6 @@ docker compose --profile ${dev|prod} up --watch
 docker compose --profile dev up --watch
 # Works on your machine? Doesn't work on prod? This is your command
 docker compose --profile prod up --watch
-```
-
-### Push database changes
-```bash
-docker compose exec -w /app/packages/api dev bun run db:push
-```
-
-### Seed database with test data
-```bash
-docker compose exec -w /app/packages/api dev bun run db:seed
 ```
 
 ## Database helpers

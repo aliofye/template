@@ -2,7 +2,7 @@ import { describe, expect, test, beforeAll } from 'bun:test';
 import { Hono } from 'hono';
 import { testClient } from 'hono/testing';
 
-import message from '../message.routes';
+import message from '../helloworld.routes';
 import clear from '../../../db/clear';
 
 describe('Message Endpoints', () => {
