@@ -1,46 +1,41 @@
-import { useState } from 'react';
 import classNames from '../../helpers/classNames';
 import { useQuery } from '../../hooks/useQuery';
-import { useMutation } from '../../hooks/useMutation';
 
 import classes from './HelloWorld.module.css';
 import { getMessage } from './HelloWorld.queries';
-import { createMessage } from './HelloWorld.mutations';
+
+import CodeBlock from '../CodeBlock';
 
 const HelloWorld = () => {
-  const [text, setText] = useState('');
-
   const getMessageQuery = useQuery('message', getMessage);
-  const createMessageMutation = useMutation(createMessage);
-
-  const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await createMessageMutation.mutate(text);
-  };
 
   if (getMessageQuery.loading) return <></>;
-  if (getMessageQuery.error) return <div>API Error</div>;
+  if (getMessageQuery.error)
+    return (
+      <div className="fade-transition">
+        <div className="gradient">
+          Your database is empty. Run the following commands.
+        </div>
+        <br />
+        <div>
+          <CodeBlock text={'bun run db:generate'} />
+        </div>
+        <div>
+          <CodeBlock text={'docker compose exec dev bun run db:setup'} />
+        </div>
+      </div>
+    );
 
+  const curlCommand = `curl ${import.meta.env.PUBLIC_WEB_API_URL}/helloworld`;
   return (
-    <div>
+    <div className="fade-transition">
       <div className={classNames('gradient', classes.center)}>
-        <h1>Message</h1>
-        <code>API URL: {import.meta.env.PUBLIC_WEB_API_URL}</code>
+        <CodeBlock text={curlCommand} />
         <p>
-          Psst. the server wants to tell you:{' '}
           {getMessageQuery.data
             ? getMessageQuery.data.text
             : getMessageQuery.error}
         </p>
-      </div>
-      <div className={classes.center}>
-        <p>Want to reply?</p>
-        <form className={classes.inputContainer} onSubmit={onSubmit}>
-          <input type="text" onChange={(e) => setText(e.target.value)} />
-          <button className={classes.button} type="submit">
-            Send
-          </button>
-        </form>
       </div>
     </div>
   );

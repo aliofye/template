@@ -1,10 +1,12 @@
-import reactLogo from '/react.svg';
-import viteLogo from '/vite.svg';
-import bunLogo from '/bun.svg';
-import honoLogo from '/hono.svg';
-import lefthookLogo from '/lefthook.svg';
-import dockerLogo from '/docker.svg';
+import MarkDown from 'react-markdown';
 import classes from './Docs.module.css';
+
+import reactLogo from '../../assets/react.svg';
+import viteLogo from '../../assets/vite.svg';
+import bunLogo from '../../assets/bun.svg';
+import honoLogo from '../../assets/hono.svg';
+import lefthookLogo from '../../assets/lefthook.svg';
+import dockerLogo from '../../assets/docker.svg';
 import classNames from '../../helpers/classNames';
 
 import Navbar from '../../components/Navbar';
@@ -68,16 +70,7 @@ const Docs = () => {
           </p>
         </section>
         <section>
-          <h1>Backend</h1>
-        </section>
-        <section>
-          <h1>Frontend</h1>
-        </section>
-        <section>
-          <h1>Containerization</h1>
-        </section>
-        <section>
-          <h1>Deployment</h1>
+          <MarkDown># Docs</MarkDown>
         </section>
       </div>
     </div>

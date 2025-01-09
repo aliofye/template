@@ -42,7 +42,7 @@ describe('useMutation', () => {
       try {
         await result.current.mutate({ id: 1 });
       } catch (e) {
-        console.log(e);
+        console.assert(e === error);
       }
     });
 
@@ -72,7 +72,7 @@ describe('useMutation', () => {
       try {
         await result.current.mutate({ id: 1 });
       } catch (e) {
-        console.log(e);
+        console.assert(e === error);
       }
     });
 

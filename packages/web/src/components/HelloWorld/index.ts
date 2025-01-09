@@ -1,2 +1,2 @@
-import Message from './HelloWorld';
-export default Message;
+import HelloWorld from './HelloWorld';
+export default HelloWorld;
