@@ -2,28 +2,36 @@ import { describe, expect, test, beforeAll } from 'bun:test';
 import { Hono } from 'hono';
 import { testClient } from 'hono/testing';
 
-import message from '../helloworld.routes';
-import clear from '../../../db/clear';
+import helloworld from '../helloworld.routes';
+import clearDatabase from '../../../db/reset';
 
-describe('Message Endpoints', () => {
-  const app = new Hono().route('/message', message);
+describe('HelloWorld Endpoints', () => {
+  const app = new Hono().route('/helloworld', helloworld);
+
+  let messageId: string;
 
   beforeAll(async () => {
-    await clear();
+    await clearDatabase();
   });
 
-  test('POST /message creates message', async () => {
-    const res = await testClient(app).message.$post({
+  test('POST /helloworld creates message', async () => {
+    const res = await testClient(app).helloworld.$post({
       form: { text: 'Hi Test!' },
     });
     expect(res.status).toBe(201);
 
     const json = await res.json();
-    expect(json).toEqual({ ok: true, message: 'Created!' });
+    expect(json).toEqual({
+      ok: true,
+      message: 'Created!',
+      id: expect.any(String),
+    });
+
+    messageId = json.id;
   });
 
-  test('GET /message returns correct message', async () => {
-    const res = await testClient(app).message.$get();
+  test('GET /helloworld returns correct message', async () => {
+    const res = await testClient(app).helloworld.$get(messageId);
     expect(res.status).toBe(200);
 
     const json = await res.json();

@@ -13,7 +13,7 @@ const app = new Hono();
 const routes = app.route('/helloworld', helloworld);
 
 export default {
-  port: Bun.env.PUBLIC_API_PORT || 3000,
+  port: process.env.PUBLIC_API_PORT || 3000,
   fetch: app.fetch,
 };
 export type AppType = typeof routes;

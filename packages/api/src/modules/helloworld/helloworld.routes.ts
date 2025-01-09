@@ -21,20 +21,34 @@ const app = new Hono()
       return c.json(message);
     }
 
-    throw new HTTPException(404, { message: 'Message not found' });
+    throw new HTTPException(404, { message: 'Message not found.' });
+  })
+  .get('/:id', async (c) => {
+    const id = c.req.param('id');
+    const message = await HelloWorldService.getOneById(id);
+    if (message) {
+      return c.json(message);
+    }
+
+    throw new HTTPException(404, { message: 'Message not found.' });
   })
   .post('/', zValidator('form', HelloWorldInsertSchema), async (c) => {
     const formData = await c.req.formData();
-    await HelloWorldService.create({
+    const message = await HelloWorldService.create({
       text: formData.get('text') as string,
     });
-    return c.json(
-      {
-        ok: true,
-        message: 'Created!',
-      },
-      201,
-    );
+
+    if (message) {
+      return c.json(
+        {
+          ok: true,
+          message: 'Created!',
+          id: message.id,
+        },
+        201,
+      );
+    }
+    throw new HTTPException(500, { message: 'Message not created.' });
   });
 
 export default app;
