@@ -18,7 +18,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ text }) => {
 
   return (
     <div className={classes.container}>
-      <code>{text}</code>
+      <code className={classes.code}>{text}</code>
       <div
         className={classes.copy}
         onClick={handleCopy}
@@ -26,11 +26,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ text }) => {
         role="button"
         tabIndex={0}
       >
-        <img
-          src={copied ? checkmark : copy}
-          className={classes.icon}
-          alt="Copy to clipboard."
-        />
+        <img src={copied ? checkmark : copy} alt="Copy to clipboard." />
       </div>
     </div>
   );

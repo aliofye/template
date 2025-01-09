@@ -1,11 +1,10 @@
-.inputContainer {
+.container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 0.5rem;
-  text-align: center;
-}
 
-.center {
+  max-width: 80%;
+
   text-align: center;
 }
 

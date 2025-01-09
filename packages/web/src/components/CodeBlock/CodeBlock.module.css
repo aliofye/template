@@ -1,10 +1,7 @@
 .container {
-  position: relative;
+  display: flex;
 
-  overflow: hidden;
-  display: inline-block;
-
-  width: 100%;
+  margin: 10px;
   padding: 10px;
 
   background-color: #2d2d2d;
@@ -12,25 +9,13 @@
 }
 
 .code {
-  color: #abb2bf;
+  flex-basis: 100%;
   word-break: break-word;
   white-space: pre-wrap;
 }
 
 .copy {
   cursor: pointer;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-}
-
-.icon:hover {
-  color: #61d9a5;
-}
-
-.icon {
-  display: block;
   width: 24px;
   height: 24px;
-  object-fit: contain;
 }

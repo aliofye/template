@@ -13,11 +13,11 @@ import Navbar from '../../components/Navbar';
 
 const Docs = () => {
   return (
-    <div>
+    <div className={classes.container}>
       <Navbar />
-      <div className={classes.sections}>
+      <div>
         <section>
-          <div>
+          <div className={classes.logoContainer}>
             <a
               href="https://evilmartians.com/opensource/lefthook"
               target="_blank"
@@ -70,7 +70,7 @@ const Docs = () => {
           </p>
         </section>
         <section>
-          <MarkDown># Docs</MarkDown>
+          <MarkDown>### Coming soon.</MarkDown>
         </section>
       </div>
     </div>
