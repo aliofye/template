@@ -1,18 +1,18 @@
 import classes from './ServerExample.module.css';
-import Message from '../../components/HelloWorld';
+import HelloWorld from '../../components/HelloWorld';
 import Navbar from '../../components/Navbar';
 
-const Example = () => {
+const ServerExample = () => {
   return (
     <div>
       <Navbar />
       <div className={classes.container}>
         <h1>Server Example Page</h1>
         <p>This is an example page.</p>
-        <Message />
+        <HelloWorld />
       </div>
     </div>
   );
 };
 
-export default Example;
+export default ServerExample;
