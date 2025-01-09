@@ -17,26 +17,22 @@ const HelloWorld = () => {
           Your database is empty. Run the following commands.
         </div>
         <br />
-        <div>
-          <CodeBlock text={'bun run db:generate'} />
-        </div>
-        <div>
-          <CodeBlock text={'docker compose exec dev bun run db:setup'} />
-        </div>
+        <CodeBlock text={'bun run db:generate'} />
+        <CodeBlock text={'docker compose exec dev bun run db:setup'} />
       </div>
     );
 
   const curlCommand = `curl ${import.meta.env.PUBLIC_WEB_API_URL}/helloworld`;
   return (
-    <div className="fade-transition">
-      <div className={classNames('gradient', classes.center)}>
-        <CodeBlock text={curlCommand} />
-        <p>
-          {getMessageQuery.data
-            ? getMessageQuery.data.text
-            : getMessageQuery.error}
-        </p>
-      </div>
+    <div
+      className={classNames('gradient', 'fade-transition', classes.container)}
+    >
+      <CodeBlock text={curlCommand} />
+      <p>
+        {getMessageQuery.data
+          ? getMessageQuery.data.text
+          : getMessageQuery.error}
+      </p>
     </div>
   );
 };
