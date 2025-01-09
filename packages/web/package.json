@@ -38,5 +38,8 @@
     "stylelint-config-clean-order": "^6.1.0",
     "stylelint-prettier": "^5.0.2",
     "vite": "^5.4.11"
+  },
+  "optionalDependencies": {
+    "react-markdown": "^9.0.3"
   }
 }

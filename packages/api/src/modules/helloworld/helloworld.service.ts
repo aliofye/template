@@ -15,6 +15,10 @@ class HelloWorldService {
     return this.helloWorldRepository.getOne();
   }
 
+  async getOneById(id: string): Promise<SelectType | undefined> {
+    return this.helloWorldRepository.getOneById(id);
+  }
+
   create(message: InsertType): Promise<SelectType | undefined> {
     return this.helloWorldRepository.insert(message);
   }

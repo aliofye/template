@@ -7,7 +7,7 @@ import { drizzle } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const client = postgres(Bun.env.DATABASE_URL!);
+const client = postgres(process.env.DATABASE_URL!);
 
 /**
  * This is where we setup drizzle for the connection

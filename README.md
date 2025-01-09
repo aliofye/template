@@ -26,7 +26,7 @@ bun install
 bunx lefthook install
 ```
 
-### Run Container
+### Run container
 ```bash
 # You can run the app in dev or prod mode
 docker compose --profile ${dev|prod} up --watch
@@ -36,15 +36,28 @@ docker compose --profile dev up --watch
 docker compose --profile prod up --watch
 ```
 
+### Generate your first migration
+```bash
+bun run db:generate 
+```
+
+### Migrate and seed your db
+```bash
+docker compose exec dev bun run db:setup
+```
+
 ## Database helpers
 ### Generate database migration
 ```bash
-docker compose exec -w /app/packages/api dev bun run db:generate
+# This is ran outside of the container intentionally
+# It generates migration files in your source code 
+# You should commit those migrations 
+bun run db:generate 
 ```
 
 ### Run database migration
 ```bash
-docker compose exec -w /app/packages/api dev bun run db:migrate
+docker compose exec dev bun run db:migrate
 ```
 
 ## Running Tests

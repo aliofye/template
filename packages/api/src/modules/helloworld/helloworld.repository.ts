@@ -3,6 +3,7 @@
  * Repositories are used to interact with the database.
  */
 
+import { eq } from 'drizzle-orm';
 import Database from '../../db';
 import { helloWorldTable } from '../../db/schema';
 
@@ -31,6 +32,14 @@ class HelloWorldRepository {
       .select()
       .from(helloWorldTable)
       .limit(1)
+      .then((results) => results[0]);
+  }
+
+  getOneById(id: string): Promise<SelectType | undefined> {
+    return this.db
+      .select()
+      .from(helloWorldTable)
+      .where(eq(helloWorldTable.id, id))
       .then((results) => results[0]);
   }
 

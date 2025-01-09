@@ -12,7 +12,11 @@
     "test": "bun run --filter '*' test",
     "test:ci": "bun run --filter '*' test:ci",
     "test:watch": "bun run --filter '*' test:watch",
-    "test:coverage": "bun run --filter '*' test:coverage"
+    "test:coverage": "bun run --filter '*' test:coverage",
+    "db:generate": "bun run --filter 'api' db:generate",
+    "db:migrate": "bun run --filter 'api' db:migrate",
+    "db:seed": "bun run --filter 'api' db:seed",
+    "db:setup": "bun run --filter 'api' db:setup"
   },
   "devDependencies": {
     "lefthook": "^1.8.4",

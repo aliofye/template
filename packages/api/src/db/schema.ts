@@ -31,3 +31,10 @@ export const helloWorldTable = pgTable('hello_world', {
 export const HelloWorldSelectSchema = createSelectSchema(helloWorldTable);
 export const HelloWorldInsertSchema = createInsertSchema(helloWorldTable);
 export const HelloWorldUpdateSchema = createUpdateSchema(helloWorldTable);
+
+/**
+ * Export the tables for use in seed.ts
+ */
+export default {
+  helloWorldTable,
+};
