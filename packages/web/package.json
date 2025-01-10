@@ -7,7 +7,7 @@
     "dev": "vite",
     "preview": "vite preview",
     "build": "vite build",
-    "compile": "tsc -b --noEmit",
+    "compile": "tsc -b --noEmit && tsc-alias",
     "lint": "eslint . && stylelint **/*.css",
     "lint:fix": "eslint --fix . && stylelint --fix **/*.css",
     "test": "bun test",
@@ -18,7 +18,6 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-markdown": "^9.0.3",
     "react-router-dom": "^7.1.0"
   },
   "devDependencies": {
@@ -38,6 +37,7 @@
     "stylelint": "^16.12.0",
     "stylelint-config-clean-order": "^6.1.0",
     "stylelint-prettier": "^5.0.2",
-    "vite": "^5.4.11"
+    "vite": "^5.4.11",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }

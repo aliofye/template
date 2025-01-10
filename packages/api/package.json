@@ -6,8 +6,8 @@
   "scripts": {
     "start": "bun run db:migrate && NODE_ENV=production bun src/app.ts",
     "dev": "NODE_ENV=development bun --hot src/app.ts",
-    "build": "tsc -b",
-    "compile": "tsc -b --noEmit",
+    "build": "tsc -b && tsc-alias",
+    "compile": "tsc -b --noEmit && tsc-alias",
     "lint": "eslint .",
     "test": "DATABASE_URL=$TEST_DATABASE_URL sh -c \"bun run db:migrate && bun test\"",
     "test:ci": "DATABASE_URL=$TEST_DATABASE_URL sh -c \"bun run db:migrate && bun test --bail\"",

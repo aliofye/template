@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@api/lib/*": ["src/lib/*"]
+    },
+    "outDir": "dist",
     // Enable latest features
     "lib": ["ESNext", "DOM"],
     "target": "ESNext",

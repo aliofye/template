@@ -3,8 +3,8 @@
  * Use it in your tests.
  */
 
-import db from '../../db/index';
-import schema from '../../db/schema';
+import db from '../db/index';
+import schema from '../db/schema';
 import { reset } from 'drizzle-seed';
 
 const resetDatabase = async (): Promise<boolean> => {

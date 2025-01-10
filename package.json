@@ -19,11 +19,12 @@
     "db:setup": "bun run --filter 'api' db:setup"
   },
   "devDependencies": {
-    "lefthook": "^1.8.4",
     "@types/bun": "^1.1.14",
     "eslint": "^9.17.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "lefthook": "^1.8.4",
     "prettier": "^3.4.2",
+    "tsc-alias": "^1.8.10",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.2"
   }

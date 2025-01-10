@@ -1,9 +1,9 @@
 import { describe, expect, test, beforeAll } from 'bun:test';
 import { Hono } from 'hono';
 import { testClient } from 'hono/testing';
+import clearDatabase from '@api/lib/utils/reset';
 
 import example from '../example.routes';
-import clearDatabase from '../../../lib/utils/reset';
 
 describe('Example Endpoints', () => {
   const app = new Hono().route('/example', example);

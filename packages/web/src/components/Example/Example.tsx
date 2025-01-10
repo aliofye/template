@@ -1,5 +1,5 @@
-import classNames from '../../lib/utils/classNames';
-import { useQuery } from '../../lib/hooks/useQuery';
+import classNames from '@web/lib/utils/classNames';
+import { useQuery } from '@web/lib/hooks/useQuery';
 
 import classes from './Example.module.css';
 import { getMessage } from './Example.queries';

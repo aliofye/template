@@ -1,4 +1,5 @@
-import MarkDown from 'react-markdown';
+import classNames from '@web/lib/utils/classNames';
+
 import classes from './Docs.module.css';
 
 import reactLogo from '../../assets/react.svg';
@@ -7,7 +8,6 @@ import bunLogo from '../../assets/bun.svg';
 import honoLogo from '../../assets/hono.svg';
 import lefthookLogo from '../../assets/lefthook.svg';
 import dockerLogo from '../../assets/docker.svg';
-import classNames from '../../lib/utils/classNames';
 
 import ExampleNavbar from '../../components/ExampleNavbar';
 
@@ -66,9 +66,7 @@ const Docs = () => {
             Click on any of the logos to read their documentation
           </p>
         </section>
-        <section>
-          <MarkDown>### Coming soon.</MarkDown>
-        </section>
+        <section></section>
       </div>
     </div>
   );
