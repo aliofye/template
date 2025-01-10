@@ -4,16 +4,14 @@
 
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import toKebabCase from '../utils/toKebabCase';
 
-// Dynamically import all files in the "pages" directory
-const pages = import.meta.glob(`../src/pages/**/*.tsx`);
+const pages = import.meta.glob('../../pages/**/*.tsx');
 
-// Transform file paths into routes
 const getRoutes = () => {
-  // Dynamic routes
   const routes = Object.keys(pages).map((path) => {
     const routePath = path
-      .replace('../src/pages', '') // Remove the "pages" prefix
+      .replace('../../pages', '') // Remove the "pages" prefix
       .replace(/\/index\.tsx$/, '') // Remove "/index" for folder-based routing
       .replace(/\.tsx$/, '') // Remove ".tsx"
       .replace(/\[([^/]+)\]/g, ':$1'); // Convert dynamic segments
@@ -23,19 +21,19 @@ const getRoutes = () => {
       pages[path] as () => Promise<{ default: React.ComponentType }>,
     );
 
-    return { path: routePath || '/', Component };
+    return { path: toKebabCase(routePath) || '/', Component };
   });
 
   // Fallback route
   routes.push({
     path: '*',
-    Component: React.lazy(() => import(`../src/pages/404`)),
+    Component: React.lazy(() => import(`../../pages/404`)),
   });
 
   return routes;
 };
 
-const AppRoutes = () => {
+const FileSystemRouter = () => {
   const routes = getRoutes();
 
   return (
@@ -55,4 +53,4 @@ const AppRoutes = () => {
   );
 };
 
-export default AppRoutes;
+export default FileSystemRouter;

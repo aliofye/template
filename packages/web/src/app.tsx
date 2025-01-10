@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import AppRoutes from '../lib/routes';
+import FileSystemRouter from './lib/router/FileSystemRouter';
 
 import './global.css';
 
@@ -10,7 +10,7 @@ if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
       <BrowserRouter>
-        <AppRoutes />
+        <FileSystemRouter />
       </BrowserRouter>
     </StrictMode>,
   );

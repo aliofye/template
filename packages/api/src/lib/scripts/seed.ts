@@ -4,8 +4,8 @@
  */
 
 import { seed, reset } from 'drizzle-seed';
-import db from '../db';
-import schema from '../db/schema';
+import db from '../../db';
+import schema from '../../db/schema';
 
 try {
   console.log('⠼ Seeding database with randomized data...');

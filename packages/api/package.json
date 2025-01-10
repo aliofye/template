@@ -15,7 +15,7 @@
     "test:coverage": "bun test --coverage",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:seed": "bun ./src/scripts/seed.ts",
+    "db:seed": "bun ./src/lib/scripts/seed.ts",
     "db:setup": "bun run db:migrate && bun run db:seed"
   },
   "dependencies": {

@@ -3,7 +3,7 @@ import { Hono } from 'hono';
 import { testClient } from 'hono/testing';
 
 import example from '../example.routes';
-import clearDatabase from '../../../db/reset';
+import clearDatabase from '../../../lib/utils/reset';
 
 describe('Example Endpoints', () => {
   const app = new Hono().route('/example', example);
