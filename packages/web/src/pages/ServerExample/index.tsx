@@ -1,15 +1,15 @@
 import classes from './ServerExample.module.css';
-import HelloWorld from '../../components/HelloWorld';
-import Navbar from '../../components/Navbar';
+import Example from '../../components/Example';
+import ExampleNavbar from '../../components/ExampleNavbar';
 
 const ServerExample = () => {
   return (
     <div>
-      <Navbar />
+      <ExampleNavbar />
       <div className={classes.container}>
         <h1>Server Example Page</h1>
         <p>This is an example page.</p>
-        <HelloWorld />
+        <Example />
       </div>
     </div>
   );

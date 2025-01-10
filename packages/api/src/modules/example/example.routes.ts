@@ -8,15 +8,15 @@ import { HTTPException } from 'hono/http-exception';
 import { zValidator } from '@hono/zod-validator';
 import { HelloWorldInsertSchema } from '../../db/schema';
 
-import HelloWorldService from './helloworld.service';
+import ExampleService from './example.service';
 
 /**
- * Chaining your route method keeps your code typesafe
+ * Chaining your route method keeps your code typesafe on the client side with hono/client
  * Read: https://hono.dev/docs/guides/best-practices#building-a-larger-application
  */
 const app = new Hono()
   .get('/', async (c) => {
-    const message = await HelloWorldService.getOne();
+    const message = await ExampleService.getOne();
     if (message) {
       return c.json(message);
     }
@@ -25,7 +25,7 @@ const app = new Hono()
   })
   .get('/:id', async (c) => {
     const id = c.req.param('id');
-    const message = await HelloWorldService.getOneById(id);
+    const message = await ExampleService.getOneById(id);
     if (message) {
       return c.json(message);
     }
@@ -34,7 +34,7 @@ const app = new Hono()
   })
   .post('/', zValidator('form', HelloWorldInsertSchema), async (c) => {
     const formData = await c.req.formData();
-    const message = await HelloWorldService.create({
+    const message = await ExampleService.create({
       text: formData.get('text') as string,
     });
 

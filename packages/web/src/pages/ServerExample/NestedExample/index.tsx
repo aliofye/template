@@ -1,10 +1,10 @@
 import classes from './NestedExample.module.css';
-import Navbar from '../../../components/Navbar';
+import ExampleNavbar from '../../../components/ExampleNavbar';
 
 const NestedExample = () => {
   return (
     <div>
-      <Navbar />
+      <ExampleNavbar />
       <div className={classes.container}>
         <h1>Nested Example Page</h1>
         <p className="gradient fade-transition">

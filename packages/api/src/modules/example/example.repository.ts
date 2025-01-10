@@ -14,7 +14,7 @@ import { helloWorldTable } from '../../db/schema';
 type SelectType = typeof helloWorldTable.$inferSelect;
 type InsertType = typeof helloWorldTable.$inferInsert;
 
-class HelloWorldRepository {
+class ExampleRepository {
   constructor(private db: typeof Database) {
     this.db = db;
   }
@@ -48,5 +48,5 @@ class HelloWorldRepository {
   }
 }
 
-export default new HelloWorldRepository(Database);
+export default new ExampleRepository(Database);
 export type { SelectType, InsertType };

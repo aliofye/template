@@ -9,12 +9,12 @@ import lefthookLogo from '../../assets/lefthook.svg';
 import dockerLogo from '../../assets/docker.svg';
 import classNames from '../../helpers/classNames';
 
-import Navbar from '../../components/Navbar';
+import ExampleNavbar from '../../components/ExampleNavbar';
 
 const Docs = () => {
   return (
     <div className={classes.container}>
-      <Navbar />
+      <ExampleNavbar />
       <div>
         <section>
           <div className={classes.logoContainer}>

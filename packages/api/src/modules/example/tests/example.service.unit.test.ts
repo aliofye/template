@@ -1,9 +1,9 @@
 import { expect, test, describe } from 'bun:test';
-import HelloWorldService from '../helloworld.service';
+import ExampleService from '../example.service';
 
-describe('HelloWorldService', () => {
+describe('ExampleService', () => {
   test('getOne should return message', async () => {
-    const result = await HelloWorldService.getOne();
+    const result = await ExampleService.getOne();
     expect(result?.text).toEqual('Hi Test!');
   });
 });

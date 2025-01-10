@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import classes from './Navbar.module.css';
+import classes from './ExampleNavbar.module.css';
 
-const Navbar = () => {
+const ExampleNavbar = () => {
   return (
     <nav className={classes.navLinks}>
       <Link to="/">Home</Link>
@@ -14,4 +14,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default ExampleNavbar;

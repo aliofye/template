@@ -1,12 +1,12 @@
 import classNames from '../../helpers/classNames';
 import { useQuery } from '../../hooks/useQuery';
 
-import classes from './HelloWorld.module.css';
-import { getMessage } from './HelloWorld.queries';
+import classes from './Example.module.css';
+import { getMessage } from './Example.queries';
 
-import CodeBlock from '../CodeBlock';
+import ExampleCodeBlock from '../ExampleCodeBlock';
 
-const HelloWorld = () => {
+const Example = () => {
   const getMessageQuery = useQuery('message', getMessage);
 
   if (getMessageQuery.loading) return <></>;
@@ -17,17 +17,17 @@ const HelloWorld = () => {
           Your database is empty. Run the following commands.
         </div>
         <br />
-        <CodeBlock text={'bun run db:generate'} />
-        <CodeBlock text={'docker compose exec dev bun run db:setup'} />
+        <ExampleCodeBlock text={'bun run db:generate'} />
+        <ExampleCodeBlock text={'docker compose exec dev bun run db:setup'} />
       </div>
     );
 
-  const curlCommand = `curl ${import.meta.env.PUBLIC_WEB_API_URL}/helloworld`;
+  const curlCommand = `curl ${import.meta.env.PUBLIC_WEB_API_URL}/example`;
   return (
     <div
       className={classNames('gradient', 'fade-transition', classes.container)}
     >
-      <CodeBlock text={curlCommand} />
+      <ExampleCodeBlock text={curlCommand} />
       <p>
         {getMessageQuery.data
           ? getMessageQuery.data.text
@@ -37,4 +37,4 @@ const HelloWorld = () => {
   );
 };
 
-export default HelloWorld;
+export default Example;

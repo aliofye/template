@@ -5,12 +5,12 @@
  */
 
 import { Hono } from 'hono';
-import helloworld from './modules/helloworld';
+import example from './modules/example';
 
 const app = new Hono();
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const routes = app.route('/helloworld', helloworld);
+const routes = app.route('/example', example);
 
 export default {
   port: process.env.PUBLIC_API_PORT || 3000,
