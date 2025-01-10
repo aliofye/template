@@ -13,9 +13,9 @@ import ExampleNavbar from '../../components/ExampleNavbar';
 
 const Docs = () => {
   return (
-    <div className={classes.container}>
+    <div>
       <ExampleNavbar />
-      <div>
+      <div className="container">
         <section>
           <div className={classes.logoContainer}>
             <a href="https://evilmartians.com/opensource/lefthook" target="_blank">

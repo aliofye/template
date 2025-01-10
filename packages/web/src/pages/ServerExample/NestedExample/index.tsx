@@ -1,11 +1,10 @@
-import classes from './NestedExample.module.css';
 import ExampleNavbar from '../../../components/ExampleNavbar';
 
 const NestedExample = () => {
   return (
     <div>
       <ExampleNavbar />
-      <div className={classes.container}>
+      <div className="container">
         <h1>Nested Example Page</h1>
         <p className="gradient fade-transition">
           Look at the address bar. You can nest routes by putting a page inside of

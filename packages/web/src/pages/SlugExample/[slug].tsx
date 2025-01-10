@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom';
-import classes from './SlugExample.module.css';
 import ExampleNavbar from '../../components/ExampleNavbar';
 
 const SlugExample = () => {
@@ -8,7 +7,7 @@ const SlugExample = () => {
   return (
     <div>
       <ExampleNavbar />
-      <div className={classes.container}>
+      <div className="container">
         <h1>Slug Example Page</h1>
         <p>
           This is an example page using slug:

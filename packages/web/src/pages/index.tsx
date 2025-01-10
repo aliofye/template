@@ -1,11 +1,10 @@
-import classes from './index.module.css';
 import ExampleNavbar from '../components/ExampleNavbar';
 
 const Home = () => {
   return (
     <div>
       <ExampleNavbar />
-      <div className={classes.container}>
+      <div className="container">
         <h1 className="gradient">Hello World</h1>
         <p>
           Edit <code>src/pages/index.tsx</code> and save to test HMR
