@@ -18,10 +18,7 @@ const Docs = () => {
       <div>
         <section>
           <div className={classes.logoContainer}>
-            <a
-              href="https://evilmartians.com/opensource/lefthook"
-              target="_blank"
-            >
+            <a href="https://evilmartians.com/opensource/lefthook" target="_blank">
               <img
                 src={lefthookLogo}
                 className={classNames(classes.logo, classes.lefthook)}

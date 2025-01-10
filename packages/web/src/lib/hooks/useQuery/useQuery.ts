@@ -21,15 +21,10 @@ export const useQuery = <T>(
 ): Query<T> => {
   const ref = useRef<() => Promise<T>>();
 
-  const [status, setStatus] = useState<'stale' | 'loading' | 'error' | 'done'>(
-    'stale',
-  );
+  const [status, setStatus] = useState<'stale' | 'loading' | 'error' | 'done'>('stale');
   const [data, setData] = useState<T>();
 
-  const id = useMemo(
-    () => (typeof key === 'string' ? key : key.join('/')),
-    [key],
-  );
+  const id = useMemo(() => (typeof key === 'string' ? key : key.join('/')), [key]);
   const { enabled, cacheTime } = { ...defaultOptions, ...options };
 
   ref.current = fetcher;
@@ -42,9 +37,7 @@ export const useQuery = <T>(
         setStatus('loading');
         ref
           .current?.()
-          .then(
-            (data) => (setData(data), setStatus('done'), cache.set(id, data)),
-          )
+          .then((data) => (setData(data), setStatus('done'), cache.set(id, data)))
           .catch(() => setStatus('error'));
       }
     }

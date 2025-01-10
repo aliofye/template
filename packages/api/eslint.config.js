@@ -30,6 +30,7 @@ export default tseslint.config(
           bracketSpacing: true,
           arrowParens: 'always',
           endOfLine: 'auto',
+          printWidth: 88,
         },
       ],
     },

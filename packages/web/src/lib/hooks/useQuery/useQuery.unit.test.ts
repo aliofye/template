@@ -42,10 +42,9 @@ describe('useQuery', () => {
   });
 
   it('should use cached data', async () => {
-    const { result, rerender } = renderHook(
-      ({ id }) => useQuery(id, mockFetch),
-      { initialProps: { id: 'test-id' } },
-    );
+    const { result, rerender } = renderHook(({ id }) => useQuery(id, mockFetch), {
+      initialProps: { id: 'test-id' },
+    });
 
     expect(mockFetch).toHaveBeenCalledTimes(1);
 

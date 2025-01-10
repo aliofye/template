@@ -24,15 +24,9 @@ const Example = () => {
 
   const curlCommand = `curl ${import.meta.env.PUBLIC_WEB_API_URL}/example`;
   return (
-    <div
-      className={classNames('gradient', 'fade-transition', classes.container)}
-    >
+    <div className={classNames('gradient', 'fade-transition', classes.container)}>
       <ExampleCodeBlock text={curlCommand} />
-      <p>
-        {getMessageQuery.data
-          ? getMessageQuery.data.text
-          : getMessageQuery.error}
-      </p>
+      <p>{getMessageQuery.data ? getMessageQuery.data.text : getMessageQuery.error}</p>
     </div>
   );
 };
