@@ -6,7 +6,7 @@
 import { Hono } from 'hono';
 import { HTTPException } from 'hono/http-exception';
 import { zValidator } from '@hono/zod-validator';
-import { HelloWorldInsertSchema } from '../../db/schema';
+import { ExampleInsertSchema } from '../../db/schema';
 
 import ExampleService from './example.service';
 
@@ -32,7 +32,7 @@ const app = new Hono()
 
     throw new HTTPException(404, { message: 'Message not found.' });
   })
-  .post('/', zValidator('form', HelloWorldInsertSchema), async (c) => {
+  .post('/', zValidator('form', ExampleInsertSchema), async (c) => {
     const formData = await c.req.formData();
     const message = await ExampleService.create({
       text: formData.get('text') as string,

@@ -7,20 +7,20 @@ import ExampleRepository from './example.repository';
 import type { SelectType, InsertType } from './example.repository';
 
 class ExampleService {
-  constructor(private helloWorldRepository: typeof ExampleRepository) {
-    this.helloWorldRepository = ExampleRepository;
+  constructor(private exampleRepository: typeof ExampleRepository) {
+    this.exampleRepository = ExampleRepository;
   }
 
   async getOne(): Promise<SelectType | undefined> {
-    return this.helloWorldRepository.getOne();
+    return this.exampleRepository.getOne();
   }
 
   async getOneById(id: string): Promise<SelectType | undefined> {
-    return this.helloWorldRepository.getOneById(id);
+    return this.exampleRepository.getOneById(id);
   }
 
   create(message: InsertType): Promise<SelectType | undefined> {
-    return this.helloWorldRepository.insert(message);
+    return this.exampleRepository.insert(message);
   }
 }
 

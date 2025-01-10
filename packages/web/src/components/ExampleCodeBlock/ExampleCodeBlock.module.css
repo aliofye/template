@@ -1,6 +1,8 @@
 .container {
   display: flex;
+  align-self: center;
 
+  width: 20vw;
   margin: 10px;
   padding: 10px;
 
@@ -18,4 +20,10 @@
   cursor: pointer;
   width: 24px;
   height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80vw;
+  }
 }
