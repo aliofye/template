@@ -2,11 +2,11 @@ import { describe, expect, test, beforeAll } from 'bun:test';
 import { Hono } from 'hono';
 import { testClient } from 'hono/testing';
 
-import helloworld from '../helloworld.routes';
+import example from '../example.routes';
 import clearDatabase from '../../../db/reset';
 
-describe('HelloWorld Endpoints', () => {
-  const app = new Hono().route('/helloworld', helloworld);
+describe('Example Endpoints', () => {
+  const app = new Hono().route('/example', example);
 
   let messageId: string;
 
@@ -14,8 +14,8 @@ describe('HelloWorld Endpoints', () => {
     await clearDatabase();
   });
 
-  test('POST /helloworld creates message', async () => {
-    const res = await testClient(app).helloworld.$post({
+  test('POST /example creates message', async () => {
+    const res = await testClient(app).example.$post({
       form: { text: 'Hi Test!' },
     });
     expect(res.status).toBe(201);
@@ -30,8 +30,8 @@ describe('HelloWorld Endpoints', () => {
     messageId = json.id;
   });
 
-  test('GET /helloworld returns correct message', async () => {
-    const res = await testClient(app).helloworld.$get(messageId);
+  test('GET /example returns correct message', async () => {
+    const res = await testClient(app).example.$get(messageId);
     expect(res.status).toBe(200);
 
     const json = await res.json();

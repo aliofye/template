@@ -1,9 +1,9 @@
 import { describe, it } from 'bun:test';
 import { render } from '@testing-library/react';
-import HelloWorld from '../HelloWorld';
+import Example from '../Example';
 
-describe('HelloWorld', () => {
+describe('Example', () => {
   it('Renders the component', () => {
-    render(<HelloWorld />);
+    render(<Example />);
   });
 });

@@ -3,12 +3,12 @@
  * Services are used to encapsulate business logic and interact with repositories.
  */
 
-import HelloWorldRepository from './helloworld.repository';
-import type { SelectType, InsertType } from './helloworld.repository';
+import ExampleRepository from './example.repository';
+import type { SelectType, InsertType } from './example.repository';
 
-class HelloWorldService {
-  constructor(private helloWorldRepository: typeof HelloWorldRepository) {
-    this.helloWorldRepository = HelloWorldRepository;
+class ExampleService {
+  constructor(private helloWorldRepository: typeof ExampleRepository) {
+    this.helloWorldRepository = ExampleRepository;
   }
 
   async getOne(): Promise<SelectType | undefined> {
@@ -24,4 +24,4 @@ class HelloWorldService {
   }
 }
 
-export default new HelloWorldService(HelloWorldRepository);
+export default new ExampleService(ExampleRepository);

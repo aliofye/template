@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classes from './CodeBlock.module.css';
+import classes from './ExampleCodeBlock.module.css';
 import copy from '../../assets/copy.svg';
 import checkmark from '../../assets/checkmark.svg';
 
@@ -7,7 +7,7 @@ interface CodeBlockProps {
   text: string;
 }
 
-const CodeBlock: React.FC<CodeBlockProps> = ({ text }) => {
+const ExampleCodeBlock: React.FC<CodeBlockProps> = ({ text }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -32,4 +32,4 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ text }) => {
   );
 };
 
-export default CodeBlock;
+export default ExampleCodeBlock;

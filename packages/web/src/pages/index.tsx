@@ -1,10 +1,10 @@
 import classes from './index.module.css';
-import Navbar from '../components/Navbar';
+import ExampleNavbar from '../components/ExampleNavbar';
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
+      <ExampleNavbar />
       <div className={classes.container}>
         <h1 className="gradient">Hello World</h1>
         <p>
