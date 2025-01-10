@@ -5,14 +5,14 @@
 
 import { eq } from 'drizzle-orm';
 import Database from '../../db';
-import { helloWorldTable } from '../../db/schema';
+import { exampleTable } from '../../db/schema';
 
 /**
  * You can use the $inferSelect and $inferInsert types to infer the types of the select and insert operations.
  * Read: https://orm.drizzle.team/docs/typescript#type-inference
  */
-type SelectType = typeof helloWorldTable.$inferSelect;
-type InsertType = typeof helloWorldTable.$inferInsert;
+type SelectType = typeof exampleTable.$inferSelect;
+type InsertType = typeof exampleTable.$inferInsert;
 
 class ExampleRepository {
   constructor(private db: typeof Database) {
@@ -21,7 +21,7 @@ class ExampleRepository {
 
   insert(message: InsertType): Promise<SelectType | undefined> {
     return this.db
-      .insert(helloWorldTable)
+      .insert(exampleTable)
       .values(message)
       .returning()
       .then((results) => results[0]);
@@ -30,7 +30,7 @@ class ExampleRepository {
   getOne(): Promise<SelectType | undefined> {
     return this.db
       .select()
-      .from(helloWorldTable)
+      .from(exampleTable)
       .limit(1)
       .then((results) => results[0]);
   }
@@ -38,13 +38,13 @@ class ExampleRepository {
   getOneById(id: string): Promise<SelectType | undefined> {
     return this.db
       .select()
-      .from(helloWorldTable)
-      .where(eq(helloWorldTable.id, id))
+      .from(exampleTable)
+      .where(eq(exampleTable.id, id))
       .then((results) => results[0]);
   }
 
   getAll(): Promise<SelectType[]> {
-    return this.db.select().from(helloWorldTable);
+    return this.db.select().from(exampleTable);
   }
 }
 

@@ -16,7 +16,7 @@ import { timestamps } from './helpers';
  * This is an example table.
  * Feel free to delete it and the migration under api/drizzle to start fresh
  */
-export const helloWorldTable = pgTable('hello_world', {
+export const exampleTable = pgTable('examples', {
   id: uuid('id')
     .default(sql`gen_random_uuid()`)
     .primaryKey(),
@@ -28,13 +28,13 @@ export const helloWorldTable = pgTable('hello_world', {
  * Export zod schemas for validation on routes
  * Read: https://orm.drizzle.team/docs/zod
  */
-export const HelloWorldSelectSchema = createSelectSchema(helloWorldTable);
-export const HelloWorldInsertSchema = createInsertSchema(helloWorldTable);
-export const HelloWorldUpdateSchema = createUpdateSchema(helloWorldTable);
+export const ExampleSelectSchema = createSelectSchema(exampleTable);
+export const ExampleInsertSchema = createInsertSchema(exampleTable);
+export const ExampleUpdateSchema = createUpdateSchema(exampleTable);
 
 /**
  * Export the tables for use in seed.ts
  */
 export default {
-  helloWorldTable,
+  exampleTable,
 };
