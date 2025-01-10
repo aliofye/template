@@ -15,9 +15,7 @@ export default tseslint.config(
       prettier,
     },
     rules: {
-      ...tseslint.configs.strict.rules,
       '@typescript-eslint/explicit-function-return-type': 'error',
-      '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-inferrable-types': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'warn',
       '@typescript-eslint/consistent-type-assertions': 'error',

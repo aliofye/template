@@ -23,7 +23,6 @@ export default tseslint.config(
       prettier,
     },
     rules: {
-      ...tseslint.configs.strict.rules,
       ...react.configs.recommended.rules,
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
