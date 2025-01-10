@@ -38,5 +38,5 @@
     "noEmitOnError": true,
     "allowUnreachableCode": false,
   },
-  "include": ["src"]
+  "include": ["src", "src/lib/hooks", "src/lib/utils/classNames"]
 }

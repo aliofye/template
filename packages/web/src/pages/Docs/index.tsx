@@ -7,7 +7,7 @@ import bunLogo from '../../assets/bun.svg';
 import honoLogo from '../../assets/hono.svg';
 import lefthookLogo from '../../assets/lefthook.svg';
 import dockerLogo from '../../assets/docker.svg';
-import classNames from '../../helpers/classNames';
+import classNames from '../../lib/utils/classNames';
 
 import ExampleNavbar from '../../components/ExampleNavbar';
 
