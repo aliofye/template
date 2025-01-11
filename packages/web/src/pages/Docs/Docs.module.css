@@ -1,4 +1,5 @@
 .scrollContainer {
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +18,7 @@
 }
 
 .docsContainer {
-  width: 40vw;
+  width: 30vw;
   height: 100vh;
 
   font-family: monospace;
