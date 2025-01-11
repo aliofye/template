@@ -17,12 +17,12 @@
 }
 
 .docsContainer {
-  width: 30vw;
   height: fit-content;
+  padding-right: 10vw;
+  padding-left: 10vw;
 
   font-family: monospace;
-  text-align: justify;
-  text-justify: inter-character;
+  text-align: left;
 }
 
 .logo {

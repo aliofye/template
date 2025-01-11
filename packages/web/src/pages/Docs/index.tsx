@@ -54,6 +54,7 @@ const Docs = () => {
           <h1> = ❤️</h1>
           <p className={classes.readTheDocs}>
             Click on any of the logos to read their documentation.
+            <br />
             <span className="gradient"> Scroll down for more information.</span>
           </p>
         </div>

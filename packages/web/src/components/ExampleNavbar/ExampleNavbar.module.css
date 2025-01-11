@@ -6,12 +6,4 @@
   justify-content: flex-start;
 
   padding: 10px;
-
-  background-color: #000;
-}
-
-@media (prefers-color-scheme: light) {
-  .navLinks {
-    background-color: #fff;
-  }
 }

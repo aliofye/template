@@ -7,7 +7,7 @@ const SlugExample = () => {
   return (
     <div>
       <ExampleNavbar />
-      <div className="container">
+      <div className="content">
         <h1>Slug Example Page</h1>
         <p>
           This is an example page using slug:

@@ -1,8 +1,6 @@
 import { useQuery } from '@/web/lib/hooks/useQuery';
-import classNames from '@/web/lib/utils/classNames';
 
 import ExampleCodeBlock from '../ExampleCodeBlock';
-import classes from './Example.module.css';
 import { getMessage } from './Example.queries';
 
 const Example = () => {
@@ -23,7 +21,7 @@ const Example = () => {
 
   const curlCommand = `curl ${import.meta.env.PUBLIC_WEB_API_URL}/example`;
   return (
-    <div className={classNames('gradient', 'fade-transition', classes.container)}>
+    <div className="gradient fade-transition">
       <ExampleCodeBlock text={curlCommand} />
       <p>{getMessageQuery.data ? getMessageQuery.data.text : getMessageQuery.error}</p>
     </div>
