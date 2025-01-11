@@ -35,7 +35,7 @@
   transition: filter 300ms;
 }
 
-.logo:hover {
+.logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
@@ -43,16 +43,16 @@
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
-.logo.bun:hover {
-  filter: drop-shadow(0 0 2em #eaeac2aa);
-}
-
 .logo.hono:hover {
   filter: drop-shadow(0 0 2em #c87b0eaa);
 }
 
-.logo.lefthook:hover {
-  filter: drop-shadow(0 0 2em #d91515aa);
+.logo.drizzle:hover {
+  filter: drop-shadow(0 0 2em #c5f74f);
+}
+
+.logo.bun:hover {
+  filter: drop-shadow(0 0 2em #eaeac2aa);
 }
 
 .logo.docker:hover {

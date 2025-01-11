@@ -2,6 +2,7 @@ import classNames from '@/web/lib/utils/classNames';
 
 import bunLogo from '../../assets/bun.svg';
 import dockerLogo from '../../assets/docker.svg';
+import drizzleLogo from '../../assets/drizzle.svg';
 import honoLogo from '../../assets/hono.svg';
 import reactLogo from '../../assets/react.svg';
 import viteLogo from '../../assets/vite.svg';
@@ -19,7 +20,7 @@ const Docs = () => {
           <a href="https://react.dev" target="_blank">
             <img
               src={reactLogo}
-              className={classNames(classes.logo)}
+              className={classNames(classes.logo, classes.react)}
               alt="React logo"
             />
           </a>
@@ -35,6 +36,13 @@ const Docs = () => {
               src={honoLogo}
               className={classNames(classes.logo, classes.hono)}
               alt="Hono logo"
+            />
+          </a>
+          <a href="https://orm.drizzle.team/docs/overview" target="_blank">
+            <img
+              src={drizzleLogo}
+              className={classNames(classes.logo, classes.drizzle)}
+              alt="Drizzle logo"
             />
           </a>
           <a href="https://bun.sh" target="_blank">
