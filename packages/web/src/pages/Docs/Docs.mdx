@@ -1,0 +1,58 @@
+# Motivation
+Throughout the years, We saw many developers struggle with the same issues:
+* Non-existent or poorly written documentation for API endpoints
+* No typescript adoption
+* Highly decoupled codebases
+* Very slow test runs
+* Poor developer experience
+* Hard to deploy
+
+So we set out to resolve these issues by creating a monorepo with the following goals:
+* Type safety out of the box with TypeScript
+* Fast running tests
+* A single codebase for backend and frontend
+* Automatic API documentation generation
+* Easy to deploy
+* A great developer experience
+
+
+# Why not [Insert Framework Here]?
+Short answer, because we don't want to.
+We wanted to build something flexible, don't like React? swap it out for Vue. 
+
+Don't like Express? swap it out for Fastify, Koa or the million other web frameworks.
+
+
+# Overview
+In this monorepo you will find the following packages: `api` and `web`
+
+These packages contain your backend and frontend code respectively.
+
+## Runtime
+We use `Bun` as our runtime for both the backend and frontend. 
+
+It is built on top of the V8 engine and is compatible with Node.js.
+
+Main benefits: blazingly fast and a drop-in replacement for Node.js.
+
+## Database
+We use `Drizzle` as our ORM. It is a TypeScript ORM for SQL databases.
+
+Main benefits: type safety, sql like queries and a great developer experience.
+
+## Backend
+We use `Hono` as our web framework. It is a fast and lightweight web framework for Bun.
+
+Main benefits: fast and lightweight, 0 dependencies, and RPC like developer experience using `hono/client`.
+
+## Frontend
+We use `React` as our frontend framework. It is a popular and widely used frontend framework.
+
+We use `Vite` for our build tool. It is a fast and lightweight build tool for modern web applications.
+
+Main benefits: large community, easy to use, production ready framework.
+
+## Containerization
+We use `Docker` for containerization.
+
+Main benefits: easy to deploy, and no more "it works on my machine" issues.

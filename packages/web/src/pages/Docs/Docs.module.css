@@ -1,7 +1,28 @@
-.logoContainer {
-  max-width: 100%;
-  padding: 2em;
+.scrollContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
   text-align: center;
+}
+.logoContainer {
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+}
+
+.docsContainer {
+  width: 40vw;
+  height: 100vh;
+
+  font-family: monospace;
+  text-align: justify;
+  text-justify: inter-character;
 }
 
 .logo {
@@ -48,12 +69,18 @@
   }
 }
 
+.readTheDocs {
+  color: #888;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
-.readTheDocs {
-  color: #888;
+@media screen and (max-width: 600px) {
+  .docsContainer {
+    width: 80vw;
+  }
 }
