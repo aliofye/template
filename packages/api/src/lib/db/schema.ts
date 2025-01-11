@@ -29,8 +29,18 @@ export const exampleTable = pgTable('examples', {
  * Read: https://orm.drizzle.team/docs/zod
  */
 export const ExampleSelectSchema = createSelectSchema(exampleTable);
-export const ExampleInsertSchema = createInsertSchema(exampleTable);
-export const ExampleUpdateSchema = createUpdateSchema(exampleTable);
+export const ExampleInsertSchema = createInsertSchema(exampleTable).omit({
+  id: true,
+  createdAt: true,
+  updatedAt: true,
+  deletedAt: true,
+});
+export const ExampleUpdateSchema = createUpdateSchema(exampleTable).omit({
+  id: true,
+  createdAt: true,
+  updatedAt: true,
+  deletedAt: true,
+});
 
 /**
  * Export the tables for use in seed.ts

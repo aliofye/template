@@ -13,7 +13,7 @@ interface Options<TData> {
 
 export const useMutation = <TData, TRequest>(
   mutationFn: (request: TRequest) => Promise<TData>,
-  options: Options<TData> = {}, // TODO fix data type
+  options: Options<TData> = {},
 ): Mutation<TData, TRequest> => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<boolean | Error>(false);
