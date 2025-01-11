@@ -14,39 +14,41 @@ const app = new Hono();
 
 const routes = app.route('/example', example);
 
-/**
- * Setup automatic OpenAPI documentation for your API
- */
-app.get(
-  '/openapi',
-  openAPISpecs(routes, {
-    documentation: {
-      info: {
-        title: 'Documentation',
-        version: '1.0.0',
-        description: 'For your API',
-      },
-      servers: [
-        {
-          url: 'http://localhost:3000',
-          description: 'Local server',
+if (process.env.NODE_ENV === 'development') {
+  /**
+   * Setup automatic OpenAPI documentation for your API
+   */
+  app.get(
+    '/openapi',
+    openAPISpecs(routes, {
+      documentation: {
+        info: {
+          title: 'Documentation',
+          version: '1.0.0',
+          description: 'For your API',
         },
-      ],
-    },
-  }),
-);
-/**
- * Setup openapi doc visualization for your API using scalar
- */
-app.get(
-  '/docs',
-  apiReference({
-    theme: 'saturn',
-    spec: {
-      url: '/openapi',
-    },
-  }),
-);
+        servers: [
+          {
+            url: `http://localhost:${process.env.PUBLIC_API_PORT || 3000}`,
+            description: 'Local server',
+          },
+        ],
+      },
+    }),
+  );
+  /**
+   * Setup openapi doc visualization for your API using scalar
+   */
+  app.get(
+    '/docs',
+    apiReference({
+      theme: 'saturn',
+      spec: {
+        url: '/openapi',
+      },
+    }),
+  );
+}
 
 export default {
   port: process.env.PUBLIC_API_PORT || 3000,
