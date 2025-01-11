@@ -1,4 +1,4 @@
-# React + Vite + Bun + Hono + Lefthook = ❤️
+# React + Vite + Hono + Drizzle + Bun + Docker = ❤️
 
 > \>_ Out there, it’s so breathtaking, isn’t it?
 
