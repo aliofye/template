@@ -3,7 +3,6 @@ import classNames from '@/web/lib/utils/classNames';
 import bunLogo from '../../assets/bun.svg';
 import dockerLogo from '../../assets/docker.svg';
 import honoLogo from '../../assets/hono.svg';
-import lefthookLogo from '../../assets/lefthook.svg';
 import reactLogo from '../../assets/react.svg';
 import viteLogo from '../../assets/vite.svg';
 
@@ -16,14 +15,7 @@ const Docs = () => {
     <div>
       <ExampleNavbar />
       <div className={classes.scrollContainer}>
-        <section className={classes.logoContainer}>
-          <a href="https://evilmartians.com/opensource/lefthook" target="_blank">
-            <img
-              src={lefthookLogo}
-              className={classNames(classes.logo, classes.lefthook)}
-              alt="Lefthook logo"
-            />
-          </a>
+        <div className={classes.logoContainer}>
           <a href="https://react.dev" target="_blank">
             <img
               src={reactLogo}
@@ -61,12 +53,13 @@ const Docs = () => {
           </a>
           <h1> = ❤️</h1>
           <p className={classes.readTheDocs}>
-            Click on any of the logos to read their documentation
+            Click on any of the logos to read their documentation.
+            <span className="gradient"> Scroll down for more information.</span>
           </p>
-        </section>
-        <section className={classes.docsContainer}>
+        </div>
+        <div className={classes.docsContainer}>
           <Markdown />
-        </section>
+        </div>
       </div>
     </div>
   );

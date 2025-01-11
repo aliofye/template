@@ -5,8 +5,7 @@
   align-items: center;
   justify-content: center;
 
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
 
   text-align: center;
 }
@@ -19,7 +18,7 @@
 
 .docsContainer {
   width: 30vw;
-  height: 100vh;
+  height: fit-content;
 
   font-family: monospace;
   text-align: justify;
@@ -75,7 +74,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+  a:nth-of-type(1) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
