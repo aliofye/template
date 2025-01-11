@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@api/*": ["../api/src/*"],
-      "@web/lib/*": ["src/lib/*"],
+      "@/api/*": ["../api/src/*"],
+      "@/web/lib/*": ["src/lib/*"],
     },
     "outDir": "dist",
     "target": "ES2020",

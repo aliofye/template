@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import FileSystemRouter from '@web/lib/router/FileSystemRouter';
+import FileSystemRouter from '@/web/lib/router/FileSystemRouter';
 
 import './global.css';
 

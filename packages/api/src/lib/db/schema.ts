@@ -3,13 +3,13 @@
  * Read: https://orm.drizzle.team/docs/sql-schema-declaration
  */
 
+import { sql } from 'drizzle-orm';
 import { pgTable, uuid, varchar } from 'drizzle-orm/pg-core';
 import {
   createSelectSchema,
   createInsertSchema,
   createUpdateSchema,
 } from 'drizzle-zod';
-import { sql } from 'drizzle-orm';
 import { timestamps } from './helpers';
 
 /**

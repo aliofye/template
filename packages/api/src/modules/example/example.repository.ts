@@ -4,8 +4,8 @@
  */
 
 import { eq } from 'drizzle-orm';
-import Database from '@api/lib/db';
-import { exampleTable } from '@api/lib/db/schema';
+import Database from '@/api/lib/db';
+import { exampleTable } from '@/api/lib/db/schema';
 
 /**
  * You can use the $inferSelect and $inferInsert types to infer the types of the select and insert operations.

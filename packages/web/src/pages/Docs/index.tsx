@@ -1,16 +1,15 @@
-import classNames from '@web/lib/utils/classNames';
+import classNames from '@/web/lib/utils/classNames';
 
-import classes from './Docs.module.css';
-
-import reactLogo from '../../assets/react.svg';
-import viteLogo from '../../assets/vite.svg';
 import bunLogo from '../../assets/bun.svg';
+import dockerLogo from '../../assets/docker.svg';
 import honoLogo from '../../assets/hono.svg';
 import lefthookLogo from '../../assets/lefthook.svg';
-import dockerLogo from '../../assets/docker.svg';
+import reactLogo from '../../assets/react.svg';
+import viteLogo from '../../assets/vite.svg';
 
 import ExampleNavbar from '../../components/ExampleNavbar';
 import Markdown from './Docs.mdx';
+import classes from './Docs.module.css';
 
 const Docs = () => {
   return (

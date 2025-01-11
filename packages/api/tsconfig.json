@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@api/lib/*": ["src/lib/*"]
+      "@/api/lib/*": ["src/lib/*"]
     },
     "outDir": "dist",
     // Enable latest features

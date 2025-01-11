@@ -1,7 +1,7 @@
 import { describe, expect, test, beforeAll } from 'bun:test';
 import { Hono } from 'hono';
 import { testClient } from 'hono/testing';
-import clearDatabase from '@api/lib/utils/reset';
+import clearDatabase from '@/api/lib/utils/reset';
 
 import example from '../example.routes';
 

@@ -1,10 +1,9 @@
-import classNames from '@web/lib/utils/classNames';
-import { useQuery } from '@web/lib/hooks/useQuery';
-
-import classes from './Example.module.css';
-import { getMessage } from './Example.queries';
+import { useQuery } from '@/web/lib/hooks/useQuery';
+import classNames from '@/web/lib/utils/classNames';
 
 import ExampleCodeBlock from '../ExampleCodeBlock';
+import classes from './Example.module.css';
+import { getMessage } from './Example.queries';
 
 const Example = () => {
   const getMessageQuery = useQuery('message', getMessage);

@@ -1,15 +1,21 @@
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import imports from 'eslint-plugin-import';
+import jsxa11y from 'eslint-plugin-jsx-a11y';
+import prettier from 'eslint-plugin-prettier';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import jsxa11y from 'eslint-plugin-jsx-a11y';
-import prettier from 'eslint-plugin-prettier';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   { ignores: ['dist', 'coverage', 'node-modules'] },
   {
-    extends: [...tseslint.configs.strict, ...tseslint.configs.stylistic],
+    extends: [
+      ...tseslint.configs.strict,
+      ...tseslint.configs.stylistic,
+      imports.flatConfigs.recommended,
+      imports.flatConfigs.typescript,
+    ],
     files: ['**/*.{ts,tsx,js}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -31,6 +37,25 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       ...jsxa11y.configs.recommended.rules,
       ...prettier.configs.recommended.rules,
+      'import/no-unresolved': 'off',
+      'import/order': [
+        'warn',
+        {
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+          pathGroups: [
+            {
+              pattern: '@/**',
+              group: 'internal',
+              position: 'after',
+            },
+          ],
+          pathGroupsExcludedImportTypes: ['builtin', 'object'],
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          },
+        },
+      ],
       'prettier/prettier': [
         'warn',
         {

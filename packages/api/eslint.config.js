@@ -1,11 +1,17 @@
+import imports from 'eslint-plugin-import';
+import prettier from 'eslint-plugin-prettier';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
-import prettier from 'eslint-plugin-prettier';
 
 export default tseslint.config(
   { ignores: ['coverage', 'node-modules'] },
   {
-    extends: [...tseslint.configs.strict, ...tseslint.configs.stylistic],
+    extends: [
+      ...tseslint.configs.strict,
+      ...tseslint.configs.stylistic,
+      imports.flatConfigs.recommended,
+      imports.flatConfigs.typescript,
+    ],
     files: ['**/*.{ts,js}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -19,6 +25,25 @@ export default tseslint.config(
       '@typescript-eslint/no-inferrable-types': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'warn',
       '@typescript-eslint/consistent-type-assertions': 'error',
+      'import/no-unresolved': 'off',
+      'import/order': [
+        'warn',
+        {
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+          pathGroups: [
+            {
+              pattern: '@/**',
+              group: 'internal',
+              position: 'after',
+            },
+          ],
+          pathGroupsExcludedImportTypes: ['builtin', 'object'],
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          },
+        },
+      ],
       ...prettier.configs.recommended.rules,
       'prettier/prettier': [
         'warn',

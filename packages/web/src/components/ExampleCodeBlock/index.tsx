@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import classes from './ExampleCodeBlock.module.css';
-import copy from '../../assets/copy.svg';
 import checkmark from '../../assets/checkmark.svg';
+import copy from '../../assets/copy.svg';
+import classes from './ExampleCodeBlock.module.css';
 
 interface CodeBlockProps {
   text: string;
