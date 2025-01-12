@@ -183,12 +183,12 @@ input:focus {
     padding-right: 30vw;
     padding-left: 30vw;
   }
+}
 
-  /* Large Devices, Wide Screens */
-  @media only screen and (min-width: 1200px) {
-    .content {
-      padding-right: 30vw;
-      padding-left: 30vw;
-    }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .content {
+    padding-right: 30vw;
+    padding-left: 30vw;
   }
 }

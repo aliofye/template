@@ -1,18 +1,16 @@
 .scrollContainer {
   overflow-x: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
 
   max-width: 100%;
 
   text-align: center;
 }
+
 .logoContainer {
   align-content: center;
-  width: 100vw;
-  height: 100vh;
   padding: 2em;
 }
 
@@ -78,6 +76,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .scrollContainer {
+    flex-direction: column;
+  }
+
   .docsContainer {
     width: 80vw;
   }
