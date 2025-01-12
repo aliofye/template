@@ -6,13 +6,13 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import toKebabCase from '../utils/toKebabCase';
 
-const pages = import.meta.glob('../../pages/**/*.tsx');
+const pages = import.meta.glob('../../pages/**/*.{ts,tsx}');
 
 const getRoutes = () => {
   const routes = Object.keys(pages).map((path) => {
     const routePath = path
       .replace('../../pages', '') // Remove the "pages" prefix
-      .replace(/\/index\.tsx$/, '') // Remove "/index" for folder-based routing
+      .replace(/\/index\.ts$/, '') // Remove "/index" for folder-based routing
       .replace(/\.tsx$/, '') // Remove ".tsx"
       .replace(/\[([^/]+)\]/g, ':$1'); // Convert dynamic segments
 

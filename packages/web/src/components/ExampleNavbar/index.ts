@@ -1,2 +1,1 @@
-import ExampleNavbar from './ExampleNavbar';
-export default ExampleNavbar;
+export { default } from './ExampleNavbar';

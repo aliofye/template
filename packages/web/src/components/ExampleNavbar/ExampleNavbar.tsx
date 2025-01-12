@@ -6,9 +6,9 @@ const ExampleNavbar = () => {
   return (
     <nav className={classes.navLinks}>
       <Link to="/">Home</Link>
-      <Link to="/server-example">ServerExample</Link>
-      <Link to="/server-example/nested-example">NestedExample</Link>
-      <Link to="/slug-example/slug">SlugExample</Link>
+      <Link to="/examples/server-example">ServerExample</Link>
+      <Link to="/examples/nested-example">NestedExample</Link>
+      <Link to="/examples/slug-example/slug">SlugExample</Link>
       <Link to="/non-existing-slug">InvalidRoute</Link>
       <Link to="/docs">Architecture</Link>
       {import.meta.env.DEV && (

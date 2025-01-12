@@ -1,11 +1,10 @@
+import bunLogo from '@/web/assets/bun.svg';
+import dockerLogo from '@/web/assets/docker.svg';
+import drizzleLogo from '@/web/assets/drizzle.svg';
+import honoLogo from '@/web/assets/hono.svg';
+import reactLogo from '@/web/assets/react.svg';
+import viteLogo from '@/web/assets/vite.svg';
 import classNames from '@/web/lib/utils/classNames';
-
-import bunLogo from '../../assets/bun.svg';
-import dockerLogo from '../../assets/docker.svg';
-import drizzleLogo from '../../assets/drizzle.svg';
-import honoLogo from '../../assets/hono.svg';
-import reactLogo from '../../assets/react.svg';
-import viteLogo from '../../assets/vite.svg';
 
 import ExampleNavbar from '../../components/ExampleNavbar';
 import Markdown from './Docs.mdx';

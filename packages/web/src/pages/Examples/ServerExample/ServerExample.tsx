@@ -1,5 +1,5 @@
-import Example from '../../components/Example';
-import ExampleNavbar from '../../components/ExampleNavbar';
+import ExampleNavbar from '../../../components/ExampleNavbar';
+import Example from './components/Example';
 
 const ServerExample = () => {
   return (

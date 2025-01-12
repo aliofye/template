@@ -4,6 +4,8 @@
     "paths": {
       "@/api/*": ["../api/src/*"],
       "@/web/lib/*": ["src/lib/*"],
+      "@/web/components/*": ["src/components/*"],
+      "@/web/assets/*": ["src/assets/*"],
     },
     "outDir": "dist",
     "target": "ES2020",

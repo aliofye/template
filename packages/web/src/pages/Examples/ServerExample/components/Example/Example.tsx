@@ -1,6 +1,6 @@
+import ExampleCodeBlock from '@/web/components/ExampleCodeBlock';
 import { useQuery } from '@/web/lib/hooks/useQuery';
 
-import ExampleCodeBlock from '../ExampleCodeBlock';
 import { getMessage } from './Example.queries';
 
 const Example = () => {
