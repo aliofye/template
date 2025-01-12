@@ -1,5 +1,5 @@
 /**
- * Read: https://vite.dev/config/
+ * @see: https://vite.dev/config/
  **/
 
 import mdx from '@mdx-js/rollup';
@@ -14,13 +14,22 @@ export default defineConfig(({ mode }) => {
     plugins: [
       {
         enforce: 'pre',
+        // configures .mdx file support
         ...mdx(),
       },
+      // configures react support
       react(),
+      // configures typescript path aliases
       tsconfigPaths(),
     ],
     define: {
       PUBLIC_WEB_API_URL: JSON.stringify(env.PUBLIC_WEB_API_URL),
+    },
+    build: {
+      rollupOptions: {
+        // excludes test files from the bundle
+        external: (id) => /.*\.(test|spec)\..*/.test(id),
+      },
     },
     server: {
       port: 5173,
