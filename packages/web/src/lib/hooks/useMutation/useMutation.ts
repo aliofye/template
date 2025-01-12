@@ -1,3 +1,7 @@
+/**
+ * This is a custom hook that sends a mutation to an API.
+ */
+
 import { useCallback, useState } from 'react';
 
 export interface Mutation<TData, TRequest> {

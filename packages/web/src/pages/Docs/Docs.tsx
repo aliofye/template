@@ -4,9 +4,9 @@ import drizzleLogo from '@/web/assets/drizzle.svg';
 import honoLogo from '@/web/assets/hono.svg';
 import reactLogo from '@/web/assets/react.svg';
 import viteLogo from '@/web/assets/vite.svg';
+import ExampleNavbar from '@/web/components/ExampleNavbar';
 import classNames from '@/web/lib/utils/classNames';
 
-import ExampleNavbar from '../../components/ExampleNavbar';
 import Markdown from './Docs.mdx';
 import classes from './Docs.module.css';
 

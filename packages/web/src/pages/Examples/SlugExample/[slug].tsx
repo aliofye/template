@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import ExampleNavbar from '../../../components/ExampleNavbar';
+import ExampleNavbar from '@/web/components/ExampleNavbar';
 
 const SlugExample = () => {
   const { slug } = useParams<{ slug: string }>();

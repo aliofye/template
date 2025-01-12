@@ -1,3 +1,7 @@
+/**
+ * This is a custom hook that fetches data from an API.
+ */
+
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 export interface Query<T> {

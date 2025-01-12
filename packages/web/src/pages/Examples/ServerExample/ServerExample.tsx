@@ -1,4 +1,4 @@
-import ExampleNavbar from '../../../components/ExampleNavbar';
+import ExampleNavbar from '@/web/components/ExampleNavbar';
 import Example from './components/Example';
 
 const ServerExample = () => {

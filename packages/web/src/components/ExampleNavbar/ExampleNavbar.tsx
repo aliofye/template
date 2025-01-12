@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import linkIcon from '../../assets/link.svg';
+import linkIcon from '@/web/assets/link.svg';
 import classes from './ExampleNavbar.module.css';
 
 const ExampleNavbar = () => {
