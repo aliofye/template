@@ -1,8 +1,3 @@
-/**
- * This is an example repository.
- * Repositories are used to interact with the database.
- */
-
 import { eq } from 'drizzle-orm';
 import Database from '@/api/lib/db';
 import { exampleTable } from '@/api/lib/db/schema';

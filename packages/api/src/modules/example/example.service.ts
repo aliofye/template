@@ -1,8 +1,3 @@
-/**
- * This is an example service.
- * Services are used to encapsulate business logic and interact with repositories.
- */
-
 import ExampleRepository from './example.repository';
 import type { SelectType, InsertType } from './example.repository';
 

@@ -1,8 +1,3 @@
-/**
- * This is an example route.
- * Routes are used to define the endpoints of your API.
- */
-
 import { Hono } from 'hono';
 import { HTTPException } from 'hono/http-exception';
 import { describeRoute } from 'hono-openapi';

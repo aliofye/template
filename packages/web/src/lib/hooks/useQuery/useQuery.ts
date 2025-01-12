@@ -1,5 +1,13 @@
 /**
- * This is a custom hook that fetches data from an API.
+ * A custom hook for fetching data with caching and loading state management.
+ *
+ * @template T - The type of the data to be fetched.
+ * @param {string | string[]} key - A unique key or array of keys to identify the query.
+ * @param {() => Promise<T>} fetcher - A function that returns a promise resolving to the data.
+ * @param {Options} [options] - Optional settings for the query.
+ * @param {boolean} [options.enabled=true] - Whether the query should be enabled.
+ * @param {number} [options.cacheTime=0] - The duration (in milliseconds) to cache the data. Use `Infinity` for indefinite caching.
+ * @returns {Query<T>} An object containing the loading state, error state, and fetched data.
  */
 
 import { useEffect, useMemo, useRef, useState } from 'react';

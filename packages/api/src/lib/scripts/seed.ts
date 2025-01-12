@@ -1,11 +1,13 @@
 /**
- * This script is used to seed the database with random data.
- * Read: https://github.com/drizzle-team/drizzle-orm/tree/main/drizzle-seed
+ * Seeds the database with random data using the drizzle-seed library.
+ * @see {@link https://github.com/drizzle-team/drizzle-orm/tree/main/drizzle-seed}
+ *
+ * @throws Will log an error message and exit the process with status code 1 if seeding fails.
  */
 
 import { seed, reset } from 'drizzle-seed';
-import db from '../db';
-import schema from '../db/schema';
+import db from '@/api/lib/db';
+import schema from '@/api/lib/db/schema';
 
 try {
   console.log('⠼ Seeding database with randomized data...');

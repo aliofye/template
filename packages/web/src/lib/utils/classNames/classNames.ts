@@ -1,8 +1,8 @@
 /**
- * Sets multiple classes on an element.
- * This is needed because you can not set multiple classes with the `className` prop in React.
+ * Combines multiple class names into a single string.
  *
- * @param classes - classes
+ * @param {...(string | undefined)[]} classes - An array of class names, which can be strings or undefined.
+ * @returns {string} A single string containing all the class names separated by a space.
  */
 
 export default (...classes: (string | undefined)[]) => classes.join(' ');

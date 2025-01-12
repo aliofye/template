@@ -1,6 +1,11 @@
 /**
- * This file sets up the client for the API.
- * It ensures type safety between api and web and can be reused across the application.
+ * Sets up the client for the API.
+ *
+ * This client ensures type safety between the API and the web application,
+ * and can be reused across the application.
+ *
+ * @constant {AppType} client - The API client instance.
+ * @param {string} import.meta.env.PUBLIC_WEB_API_URL - The base URL for the API.
  */
 
 import { hc } from 'hono/client';

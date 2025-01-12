@@ -1,5 +1,28 @@
 /**
- * This is a custom hook that sends a mutation to an API.
+ * A hook to handle mutation requests.
+ *
+ * @template TRequest - The type of the request object.
+ * @template TData - The type of the data returned by the mutation function.
+ *
+ * @param {TRequest} request - The request object to be passed to the mutation function.
+ * @returns {Promise<TData>} - A promise that resolves to the result of the mutation function.
+ *
+ * @throws {Error} - Throws an error if the mutation function fails.
+ *
+ * @example
+ * ```typescript
+ * const { mutate } = useMutation(async (request) => {
+ *   // perform mutation
+ *   return result;
+ * });
+ *
+ * try {
+ *   const result = await mutate(request);
+ *   console.log('Mutation successful:', result);
+ * } catch (error) {
+ *   console.error('Mutation failed:', error);
+ * }
+ * ```
  */
 
 import { useCallback, useState } from 'react';

@@ -1,7 +1,14 @@
 /**
- * This file is where you setup your module routes
- * It is also the entry point to your API.
- * Read: https://hono.dev/docs/guides/best-practices#building-a-larger-application
+ * This file sets up the module routes and serves as the entry point to the API.
+ * It configures middleware for body size limits, JSON prettification, and logging.
+ * Additionally, it sets up automatic OpenAPI documentation and API reference documentation
+ * for development environments.
+ *
+ * @see {@link https://hono.dev/docs/guides/best-practices#building-a-larger-application}
+ *
+ * @typedef {Object} AppType
+ * @property {number} port - The port on which the API server will run.
+ * @property {Function} fetch - The fetch handler for the Hono application.
  */
 
 import { apiReference } from '@scalar/hono-api-reference';
