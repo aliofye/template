@@ -20,37 +20,10 @@ So we set out to resolve these issues by creating a monorepo with the following 
 Short answer, because we don't want to.
 We wanted to build something flexible, don't like React? swap it out for Vue. 
 
-Don't like Express? swap it out for Fastify, Koa or the million other web frameworks.
+Don't like Hono? swap it out for Fastify, Koa or the million other web frameworks.
 
 
 # Overview
 In this monorepo you will find the following packages: `api` and `web`
 
 These packages contain your backend and frontend code respectively.
-
-## Runtime
-We use `Bun` as our runtime for both the backend and frontend. 
-
-Main benefits: blazingly fast and a drop-in replacement for Node.js.
-
-## Database
-We use `Drizzle` as our ORM. It is a TypeScript ORM for SQL databases.
-
-Main benefits: type safety, sql like queries and a great developer experience.
-
-## Backend
-We use `Hono` as our web framework. It is a fast and lightweight web framework for Bun.
-
-Main benefits: fast and lightweight, 0 dependencies, and RPC like developer experience using `hono/client`.
-
-## Frontend
-We use `React` as our frontend framework. It is a popular and widely used frontend framework.
-
-We use `Vite` for our build tool. It is a fast and lightweight build tool for modern web applications.
-
-Main benefits: large community, easy to use, production ready framework.
-
-## Containerization
-We use `Docker` for containerization.
-
-Main benefits: easy to deploy, and no more "it works on my machine" issues.
