@@ -6,7 +6,7 @@
 import { Hono } from 'hono';
 import { HTTPException } from 'hono/http-exception';
 import { describeRoute } from 'hono-openapi';
-import { resolver, validator as zValidator } from 'hono-openapi/zod';
+import { resolver, validator } from 'hono-openapi/zod';
 import { ExampleSelectSchema, ExampleInsertSchema } from '@/api/lib/db/schema';
 
 import ExampleService from './example.service';
@@ -25,10 +25,22 @@ const app = new Hono()
       description: 'Get example message',
       responses: {
         200: {
-          description: 'Successful message response',
+          description: 'ok',
           content: {
-            'text/plain': {
+            'application/json': {
               schema: resolver(ExampleSelectSchema),
+            },
+          },
+        },
+        404: {
+          description: 'error',
+          content: {
+            'application/json': {
+              schema: {
+                type: 'object',
+                properties: { message: { type: 'string' } },
+                example: { message: 'Message not found.' },
+              },
             },
           },
         },
@@ -49,10 +61,19 @@ const app = new Hono()
       description: 'Get example message by id',
       responses: {
         200: {
-          description: 'Successful message response',
+          description: 'ok',
           content: {
-            'text/plain': {
+            'application/json': {
               schema: resolver(ExampleSelectSchema),
+            },
+          },
+        },
+        404: {
+          description: 'error',
+          content: {
+            'application/json': {
+              schema: { type: 'object', properties: { message: { type: 'string' } } },
+              example: { message: 'Message not found.' },
             },
           },
         },
@@ -73,22 +94,32 @@ const app = new Hono()
     describeRoute({
       description: 'Create example message',
       responses: {
-        200: {
-          description: 'Successful message response',
+        201: {
+          description: 'ok',
           content: {
-            'text/plain': {
+            'application/json': {
               schema: resolver(ExampleSelectSchema),
+            },
+          },
+        },
+        500: {
+          description: 'error',
+          content: {
+            'application/json': {
+              schema: {
+                type: 'object',
+                properties: { message: { type: 'string' } },
+                example: { message: 'Message not created.' },
+              },
             },
           },
         },
       },
     }),
-    zValidator('form', ExampleInsertSchema),
+    validator('json', ExampleInsertSchema),
     async (c) => {
-      const formData = await c.req.formData();
-      const message = await ExampleService.create({
-        text: formData.get('text') as string,
-      });
+      const body = c.req.valid('json');
+      const message = await ExampleService.create(body);
 
       if (message) {
         return c.json(

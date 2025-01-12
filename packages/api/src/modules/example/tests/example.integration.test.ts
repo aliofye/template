@@ -16,7 +16,7 @@ describe('Example Endpoints', () => {
 
   test('POST /example creates message', async () => {
     const res = await testClient(app).example.$post({
-      form: { text: 'Hi Test!' },
+      json: { text: 'Hi Test!' },
     });
     expect(res.status).toBe(201);
 

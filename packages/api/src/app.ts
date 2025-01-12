@@ -6,18 +6,24 @@
 
 import { apiReference } from '@scalar/hono-api-reference';
 import { Hono } from 'hono';
+import { bodyLimit } from 'hono/body-limit';
+import { logger } from 'hono/logger';
+import { prettyJSON } from 'hono/pretty-json';
 import { openAPISpecs } from 'hono-openapi';
 
 import example from './modules/example';
 
-const app = new Hono();
+const app = new Hono()
+  .use(bodyLimit({ maxSize: 1024 * 1024 * 2 }))
+  .use(prettyJSON())
+  .use(logger());
 
 const routes = app.route('/example', example);
 
+/**
+ * Setup automatic OpenAPI documentation for your API
+ */
 if (process.env.NODE_ENV === 'development') {
-  /**
-   * Setup automatic OpenAPI documentation for your API
-   */
   app.get(
     '/openapi',
     openAPISpecs(routes, {
@@ -36,9 +42,6 @@ if (process.env.NODE_ENV === 'development') {
       },
     }),
   );
-  /**
-   * Setup openapi doc visualization for your API using scalar
-   */
   app.get(
     '/docs',
     apiReference({
