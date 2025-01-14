@@ -40,7 +40,11 @@ jobs:
             echo "Waiting for PostgreSQL...";
             sleep 3;
           done
+      - name: Build
+      - run: bun run compile
+      - name: Lint
+      - run: bun run lint
       - name: Run migrations
         run: bun run db:migrate
       - name: Run tests
-        run: bun run test
+        run: bun run test:ci
