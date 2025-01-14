@@ -1,3 +1,5 @@
+[![CI Pipeline](https://github.com/aliofye/template/actions/workflows/main.yml/badge.svg?branch=github-actions)](https://github.com/aliofye/template/actions/workflows/main.yml)
+
 # React + Vite + Hono + Drizzle + Bun + Docker = ❤️
 
 > \>_ Out there, it’s so breathtaking, isn’t it?
