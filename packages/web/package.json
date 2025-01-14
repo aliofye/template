@@ -11,8 +11,8 @@
     "lint": "eslint . && stylelint **/*.css",
     "lint:fix": "eslint --fix . && stylelint --fix **/*.css",
     "test": "bun test",
-    "test:ci": "bun test --bail",
     "test:watch": "bun test --watch",
+    "test:ci": "bun test --bail",
     "test:coverage": "bun test --coverage"
   },
   "dependencies": {
