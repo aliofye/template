@@ -36,7 +36,7 @@ jobs:
         run: bun install
       - name: Compile typescript
         run: bun run compile
-      - build: Build
+      - name: Build
         run: bun run build
       - name: Lint
         run: bun run lint
