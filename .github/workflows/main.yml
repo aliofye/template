@@ -33,17 +33,17 @@ jobs:
       - name: Install bun
         uses: oven-sh/setup-bun@v2
       - name: Install dependencies
-        run: bun install 
+        run: bun install
+      - name: Compile typescript
+        run: bun run compile
+      - name: Lint
+        run: bun run lint
       - name: Wait for Database
         run: |
           until pg_isready -h localhost -p 5432 -U test_user -d test_db; do
             echo "Waiting for PostgreSQL...";
             sleep 3;
           done
-      - name: Build
-      - run: bun run compile
-      - name: Lint
-      - run: bun run lint
       - name: Run migrations
         run: bun run db:migrate
       - name: Run tests
