@@ -1,0 +1,27 @@
+# Use the official Bun image as the base image
+FROM oven/bun:latest AS bun
+
+# Set ARGs and ENVs for build
+ARG PUBLIC_WEB_API_URL
+ENV PUBLIC_WEB_API_URL=$PUBLIC_WEB_API_URL
+ENV NODE_ENV=development
+
+# Set working directory
+WORKDIR /app
+
+# Copy application files and install dependencies
+COPY bun.lockb package.json ./
+COPY packages ./packages
+RUN bun install
+
+# Build the frontend
+RUN bun run build
+
+# Copy entrypoint script and set permissions
+COPY .docker/scripts/wait-for-it.sh /app/scripts/wait-for-it.sh
+COPY .docker/scripts/dev-entrypoint.sh /app/scripts/dev-entrypoint.sh
+RUN chmod +x /app/scripts/wait-for-it.sh
+RUN chmod +x /app/scripts/dev-entrypoint.sh
+
+# Set the entrypoint to the start script
+ENTRYPOINT ["/app/scripts/dev-entrypoint.sh"]

@@ -1,10 +1,21 @@
 # Use the official Bun image as the base image
 FROM oven/bun:latest AS bun
 
-# Set ARGs and ENVs
+# Set ARGs and ENVs for build
 ARG PUBLIC_WEB_API_URL
-ENV PUBLIC_WEB_API_URL $PUBLIC_WEB_API_URL
-ENV NODE_ENV production
+ENV PUBLIC_WEB_API_URL=$PUBLIC_WEB_API_URL
+ENV NODE_ENV=production
+
+# Set working directory
+WORKDIR /app
+
+# Copy application files and install dependencies
+COPY bun.lockb package.json ./
+COPY packages ./packages
+RUN bun install
+
+# Build the frontend
+RUN bun run build
 
 # Install dependencies required for Caddy installation
 RUN apt-get update && apt-get install -y debian-keyring debian-archive-keyring apt-transport-https curl
@@ -17,23 +28,16 @@ RUN curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | t
 RUN apt-get update && apt-get install -y caddy
 
 # Copy the Caddyfile into the container and format it
-COPY Caddyfile /etc/caddy/Caddyfile
+COPY .docker/caddy/Caddyfile /etc/caddy/Caddyfile
 
-# Set the working directory to /app and copy your application files
-WORKDIR /app
-COPY packages ./packages
-COPY scripts ./scripts
-COPY bun.lockb ./bun.lockb
-COPY package.json ./package.json
-
-# Install dependencies using Bun
-RUN bun install
-
-# Build the frontend
-RUN bun run build
+# Copy entrypoint script and set permissions
+COPY .docker/scripts/wait-for-it.sh /app/scripts/wait-for-it.sh
+COPY .docker/scripts/prod-entrypoint.sh /app/scripts/prod-entrypoint.sh
+RUN chmod +x /app/scripts/wait-for-it.sh
+RUN chmod +x /app/scripts/prod-entrypoint.sh
 
 # Expose ports for the backend and Caddy server
 EXPOSE 80 443
 
 # Set the entry point to the start script
-ENTRYPOINT ["./scripts/prod-entrypoint.sh"]
+ENTRYPOINT ["/app/scripts/prod-entrypoint.sh"]
