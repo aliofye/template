@@ -6,8 +6,6 @@
     "start": "bun run --filter '*' start",
     "dev": "bun run --filter '*' dev",
     "build": "bun run --filter '*' build",
-    "lint": "bun run --filter '*' lint",
-    "lint:fix": "bun run --filter '*' lint:fix",
     "compile": "bun run --filter '*' compile",
     "test": "bun run --filter '*' test",
     "test:watch": "bun run --filter '*' test:watch",
@@ -16,7 +14,9 @@
     "db:generate": "bun run --filter 'api' db:generate",
     "db:migrate": "bun run --filter 'api' db:migrate",
     "db:seed": "bun run --filter 'api' db:seed",
-    "db:setup": "bun run --filter 'api' db:setup"
+    "db:setup": "bun run --filter 'api' db:setup",
+    "lint": "bun run --filter '*' lint",
+    "lint:fix": "bun run --filter '*' lint:fix"
   },
   "devDependencies": {
     "@types/bun": "^1.1.14",

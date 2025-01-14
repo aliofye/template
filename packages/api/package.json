@@ -6,9 +6,7 @@
   "scripts": {
     "start": "bun run db:migrate && NODE_ENV=production bun src/app.ts",
     "dev": "NODE_ENV=development bun --hot src/app.ts",
-    "build": "tsc -b && tsc-alias",
     "compile": "tsc -b --noEmit && tsc-alias",
-    "lint": "eslint .",
     "test": "DATABASE_URL=$TEST_DATABASE_URL sh -c \"bun run db:migrate && bun test\"",
     "test:watch": "DATABASE_URL=$TEST_DATABASE_URL sh -c \"bun run db:migrate && bun test --watch\"",
     "test:ci": "bun test --bail",
@@ -16,7 +14,9 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:seed": "bun ./src/lib/scripts/seed.ts",
-    "db:setup": "bun run db:migrate && bun run db:seed"
+    "db:setup": "bun run db:migrate && bun run db:seed",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "dependencies": {
     "@hono/zod-validator": "^0.4.2",

@@ -8,12 +8,12 @@
     "preview": "vite preview",
     "build": "vite build",
     "compile": "tsc -b --noEmit && tsc-alias",
-    "lint": "eslint . && stylelint **/*.css",
-    "lint:fix": "eslint --fix . && stylelint --fix **/*.css",
     "test": "bun test",
     "test:watch": "bun test --watch",
     "test:ci": "bun test --bail",
-    "test:coverage": "bun test --coverage"
+    "test:coverage": "bun test --coverage",
+    "lint": "eslint . && stylelint **/*.css",
+    "lint:fix": "eslint --fix . && stylelint --fix **/*.css"
   },
   "dependencies": {
     "react": "^18.3.1",

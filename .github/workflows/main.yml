@@ -36,6 +36,8 @@ jobs:
         run: bun install
       - name: Compile typescript
         run: bun run compile
+      - build: Build
+        run: bun run build
       - name: Lint
         run: bun run lint
       - name: Wait for Database
