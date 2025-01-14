@@ -4,8 +4,8 @@
   "private": true,
   "description": "Backend",
   "scripts": {
-    "start": "bun run db:migrate && NODE_ENV=production bun src/app.ts",
-    "dev": "NODE_ENV=development bun --hot src/app.ts",
+    "start": "bun src/app.ts",
+    "dev": "bun --hot src/app.ts",
     "compile": "tsc -b --noEmit && tsc-alias",
     "test": "DATABASE_URL=$TEST_DATABASE_URL sh -c \"bun run db:migrate && bun test\"",
     "test:watch": "DATABASE_URL=$TEST_DATABASE_URL sh -c \"bun run db:migrate && bun test --watch\"",
