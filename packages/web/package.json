@@ -5,7 +5,6 @@
   "description": "Frontend",
   "scripts": {
     "dev": "vite",
-    "preview": "vite preview",
     "build": "vite build",
     "compile": "tsc -b --noEmit && tsc-alias",
     "test": "bun test",
