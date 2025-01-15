@@ -1,5 +1,5 @@
 /**
- * Dynamically generates routes based on the file structure in the `pages` directory.
+ * @fileoverview Dynamically generates routes based on the file structure in the `pages` directory.
  *
  * This component uses Vite's `import.meta.glob` to import all files matching the pattern
  * `../../pages` and creates routes based on the file paths.
@@ -13,6 +13,10 @@
  * Each route is lazy-loaded using `React.lazy` for code-splitting.
  *
  * A fallback route is added to handle 404 errors by loading the `../../pages/404` component.
+ *
+ * @version 1.0.0
+ * @date 2025-01-15
+ * @author Ali Morshid
  *
  * @returns {JSX.Element} The `Routes` component containing all the dynamically generated routes.
  */

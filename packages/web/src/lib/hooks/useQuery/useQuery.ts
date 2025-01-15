@@ -1,5 +1,9 @@
 /**
- * A custom hook for fetching data with caching and loading state management.
+ * @fileoverview A custom hook for fetching data with caching and loading state management.
+ *
+ * @version 1.0.0
+ * @date 2025-01-15
+ * @author Ali Morshid
  *
  * @template T - The type of the data to be fetched.
  * @param {string | string[]} key - A unique key or array of keys to identify the query.

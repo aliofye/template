@@ -1,6 +1,10 @@
 /**
- * This file is used to define helper functions for the database.
- * Read: https://orm.drizzle.team/docs/sql-schema-declaration#advanced
+ * @fileoverview This file is used to define helper functions for the database.
+ *
+ * @version 1.0.0
+ * @date 2025-01-15
+ * @author Ali Morshid
+ * @see {@link https://orm.drizzle.team/docs/sql-schema-declaration#advanced} Drizzle ORM advanced schema declaration documentation.
  */
 
 import { sql } from 'drizzle-orm';

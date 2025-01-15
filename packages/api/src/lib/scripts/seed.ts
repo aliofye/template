@@ -1,6 +1,13 @@
 /**
- * Seeds the database with random data using the drizzle-seed library.
- * @see {@link https://github.com/drizzle-team/drizzle-orm/tree/main/drizzle-seed}
+ * @fileoverview Seeds the database with random data using the drizzle-seed library.
+ *
+ * This file is responsible for populating the database with initial or random data,
+ * typically for development and testing purposes.
+ *
+ * @version 1.0.0
+ * @date 2025-01-15
+ * @author Ali Morshid
+ * @see {@link https://github.com/drizzle-team/drizzle-orm/tree/main/drizzle-seed} Documentation for the drizzle-seed library.
  *
  * @throws Will log an error message and exit the process with status code 1 if seeding fails.
  */
