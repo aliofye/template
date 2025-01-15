@@ -25,6 +25,7 @@ import example from './modules/example';
 import health from './modules/health';
 
 const app = new Hono()
+  .basePath('v1')
   .use(bodyLimit({ maxSize: 1024 * 1024 * 2 }))
   .use(prettyJSON())
   .use(logger());
