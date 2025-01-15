@@ -20,6 +20,7 @@
     "lint:fix": "eslint --fix ."
   },
   "dependencies": {
+    "@hono/zod-openapi": "^0.18.3",
     "@hono/zod-validator": "^0.4.2",
     "@scalar/hono-api-reference": "^0.5.165",
     "drizzle-orm": "^0.38.3",
