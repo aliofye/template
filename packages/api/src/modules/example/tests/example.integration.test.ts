@@ -6,7 +6,7 @@ import clearDatabase from '@/api/lib/utils/reset';
 import example from '../example.routes';
 
 describe('Example Endpoints', () => {
-  const app = new Hono().route('/example', example);
+  const app = new Hono().basePath('v1').route('/example', example);
 
   let messageId: string;
 
@@ -15,7 +15,7 @@ describe('Example Endpoints', () => {
   });
 
   test('POST /example creates message', async () => {
-    const res = await testClient(app).example.$post({
+    const res = await testClient(app).v1.example.$post({
       json: { text: 'Hi Test!' },
     });
     expect(res.status).toBe(201);
@@ -31,7 +31,7 @@ describe('Example Endpoints', () => {
   });
 
   test('GET /example returns correct message', async () => {
-    const res = await testClient(app).example.$get(messageId);
+    const res = await testClient(app).v1.example.$get(messageId);
     expect(res.status).toBe(200);
 
     const json = await res.json();
