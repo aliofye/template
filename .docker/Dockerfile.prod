@@ -14,7 +14,7 @@ COPY bun.lockb package.json ./
 COPY packages ./packages
 RUN bun install
 
-# Build the frontend
+# Build the frontend and backend
 RUN bun run build
 
 # Install dependencies required for Caddy installation
