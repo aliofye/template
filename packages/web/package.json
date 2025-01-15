@@ -9,7 +9,8 @@
     "compile": "tsc -b --noEmit && tsc-alias",
     "test": "bun test",
     "test:watch": "bun test --watch",
-    "test:ci": "bun test --bail",
+    "test:bail": "bun test --bail",
+    "test:ci": "bun test --rerun-each 3",
     "test:coverage": "bun test --coverage",
     "lint": "eslint . && stylelint **/*.css",
     "lint:fix": "eslint --fix . && stylelint --fix **/*.css"
