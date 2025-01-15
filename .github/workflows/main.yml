@@ -46,6 +46,8 @@ jobs:
             echo "Waiting for PostgreSQL...";
             sleep 3;
           done
+      - name: Generate migrations
+        run: bun run db:generate
       - name: Run migrations
         run: bun run db:migrate
       - name: Run tests
