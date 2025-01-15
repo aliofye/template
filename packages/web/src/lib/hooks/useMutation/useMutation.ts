@@ -1,5 +1,9 @@
 /**
- * A hook to handle mutation requests.
+ * @fileoverview A hook to handle mutation requests.
+ *
+ * @version 1.0.0
+ * @date 2025-01-15
+ * @author Ali Morshid
  *
  * @template TRequest - The type of the request object.
  * @template TData - The type of the data returned by the mutation function.

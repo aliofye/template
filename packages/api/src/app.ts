@@ -1,9 +1,12 @@
 /**
- * This file sets up the module routes and serves as the entry point to the API.
+ * @fileoverview This file sets up the module routes and serves as the entry point to the API.
  * It configures middleware for body size limits, JSON prettification, and logging.
  * Additionally, it sets up automatic OpenAPI documentation and API reference documentation
  * for development environments.
  *
+ * @version 1.0.0
+ * @date 2025-01-15
+ * @author Ali Morshid
  * @see {@link https://hono.dev/docs/guides/best-practices#building-a-larger-application}
  *
  * @typedef {Object} AppType

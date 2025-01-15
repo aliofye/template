@@ -1,9 +1,12 @@
 /**
- * This file defines the schema of the database using Drizzle ORM.
+ * @fileoverview Defines the schema of the database using Drizzle ORM.
  *
- * @see {@link https://orm.drizzle.team/docs/sql-schema-declaration}
+ * This file sets up the database schema, including tables, columns, and relationships, using the Drizzle ORM library.
  *
- * @module schema
+ * @version 1.0.0
+ * @date 2025-01-15
+ * @author Ali Morshid
+ * @see {@link https://orm.drizzle.team/docs/sql-schema-declaration} Documentation for defining SQL schema using Drizzle ORM.
  */
 
 import { sql } from 'drizzle-orm';

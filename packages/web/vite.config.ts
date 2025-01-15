@@ -1,6 +1,13 @@
 /**
- * @see: https://vite.dev/config/
- **/
+ * @fileoverview Configuration file for Vite.
+ *
+ * This file defines the configuration settings for building and running the application using Vite.
+ *
+ * @version 1.0.0
+ * @date 2025-01-15
+ * @author Ali Morshid
+ * @see {@link https://vite.dev/config/} Official Vite configuration documentation.
+ */
 
 import mdx from '@mdx-js/rollup';
 import react from '@vitejs/plugin-react-swc';

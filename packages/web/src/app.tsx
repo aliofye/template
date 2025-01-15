@@ -1,5 +1,5 @@
 /**
- * Entry point for the React application.
+ * @fileoverview Entry point for the React application.
  *
  * This file sets up the root of the React application and renders it into the DOM.
  * It uses `StrictMode` to highlight potential problems in the application.
@@ -11,6 +11,10 @@
  *
  * The root element is obtained from the DOM using `getElementById`.
  * If the root element is found, the React application is rendered into it using `createRoot`.
+ *
+ * @version 1.0.0
+ * @date 2025-01-15
+ * @author Ali Morshid
  */
 
 import { StrictMode } from 'react';
