@@ -14,7 +14,6 @@
     "db:generate": "bun run --filter 'api' db:generate",
     "db:migrate": "bun run --filter 'api' db:migrate",
     "db:seed": "bun run --filter 'api' db:seed",
-    "db:setup": "bun run --filter 'api' db:setup",
     "lint": "bun run --filter '*' lint",
     "lint:fix": "bun run --filter '*' lint:fix"
   },

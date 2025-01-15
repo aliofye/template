@@ -1,29 +1,41 @@
 # Motivation
-Throughout the years, We saw many developers struggle with the same issues:
-* Non-existent or poorly written documentation for API endpoints
-* No typescript adoption
-* Highly decoupled codebases
-* Very slow test runs
-* Poor developer experience
-* Hard to deploy
 
-So we set out to resolve these issues by creating a monorepo with the following goals:
-* Type safety out of the box with TypeScript
-* Fast running tests
-* A single codebase for backend and frontend
-* Automatic API documentation generation
-* Easy to deploy
-* A great developer experience
+Over the years, we’ve observed several common challenges faced by developers:
 
+- **Poor API Documentation**: Many API endpoints lack sufficient or well-structured documentation.
+- **No TypeScript Adoption**: Many projects miss out on TypeScript’s benefits, leading to potential runtime issues.
+- **Highly Decoupled Codebases**: Projects often become difficult to manage due to overcomplicated separation between components.
+- **Slow Test Runs**: Inefficient test setups lead to long testing cycles, hindering development speed.
+- **Poor Developer Experience**: Developers often face difficulties in terms of usability, tooling, and workflow.
+- **Difficult Deployments**: Deployment processes can be complex and error-prone, leading to frustration.
 
-# Why not [Insert Framework Here]?
-Short answer, because we don't want to.
-We wanted to build something flexible, don't like React? swap it out for Vue. 
+To address these issues, we created a monorepo with the following key goals:
 
-Don't like Hono? swap it out for Fastify, Koa or the million other web frameworks.
+- **Type Safety with TypeScript**: Providing type safety out of the box for both the backend and frontend.
+- **Fast Test Execution**: Optimizing the test runs for quicker feedback and smoother development.
+- **Unified Codebase**: A single codebase to manage both the backend and frontend, reducing complexity.
+- **Automatic API Documentation**: Generating API documentation automatically to ensure up-to-date and accurate docs.
+- **Easy Deployments**: Simplifying the deployment process to make it faster and less error-prone.
+- **Great Developer Experience**: Focusing on an intuitive and efficient experience for developers.
 
+---
+
+# Why Not [Insert Framework Here]?
+
+### The Short Answer: We Didn’t Want To
+
+We decided to build something flexible and customizable. Rather than relying on a single framework that might impose constraints on the project, we made sure our solution allows you to:
+
+- **Swap Frontend Frameworks**: Don’t like React? Swap it out for Vue or any other framework you prefer.
+- **Change Web Frameworks**: Prefer Fastify, Koa, or another web framework over Hono? The flexibility is built in.
+
+---
 
 # Overview
-In this monorepo you will find the following packages: `api` and `web`
 
-These packages contain your backend and frontend code respectively.
+This monorepo consists of the following primary packages:
+
+- **`api`**: Contains all backend-related code.
+- **`web`**: Contains all frontend-related code.
+
+These packages are structured to support both backend and frontend development in a seamless and unified environment.
