@@ -15,4 +15,4 @@ pre-push:
     build:
       run: docker compose exec dev bun run build
     test:
-      run: docker compose exec dev bun run test:ci
+      run: docker compose exec dev bun run test:bail

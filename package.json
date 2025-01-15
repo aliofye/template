@@ -9,6 +9,7 @@
     "compile": "bun run --filter '*' compile",
     "test": "bun run --filter '*' test",
     "test:watch": "bun run --filter '*' test:watch",
+    "test:bail": "bun run --filter '*' test:bail",
     "test:ci": "bun run --filter '*' test:ci",
     "test:coverage": "bun run --filter '*' test:coverage",
     "db:generate": "bun run --filter 'api' db:generate",
