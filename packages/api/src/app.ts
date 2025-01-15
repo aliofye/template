@@ -19,13 +19,14 @@ import { prettyJSON } from 'hono/pretty-json';
 import { openAPISpecs } from 'hono-openapi';
 
 import example from './modules/example';
+import health from './modules/health';
 
 const app = new Hono()
   .use(bodyLimit({ maxSize: 1024 * 1024 * 2 }))
   .use(prettyJSON())
   .use(logger());
 
-const routes = app.route('/example', example);
+const routes = app.route('/health', health).route('/example', example);
 
 /**
  * Setup automatic OpenAPI documentation for your API
