@@ -40,7 +40,7 @@ docker compose --profile prod up --watch
 
 ### Generate your first migration
 ```bash
-bun run db:generate 
+docker compose exec dev bun run db:generate 
 ```
 
 ### Migrate and seed your db
@@ -51,10 +51,7 @@ docker compose exec dev bun run db:setup
 ## Database helpers
 ### Generate database migration
 ```bash
-# This is ran outside of the container intentionally
-# It generates migration files in your source code 
-# You should commit those migrations 
-bun run db:generate 
+docker compose exec dev bun run db:generate 
 ```
 
 ### Run database migration
