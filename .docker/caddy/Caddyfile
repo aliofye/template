@@ -14,7 +14,7 @@
 	}
 	route /* {
 		# Serve static files from the "build" directory (Vite's build output)
-		root * packages/web/build
+		root * packages/web/build/client
 		# Handle SPA routing by rewriting all paths to index.html
 		try_files {path} /index.html
 		# Static file serving
@@ -30,7 +30,7 @@
 	# Add security headers
 	header {
 		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-		Content-Security-Policy "default-src 'self'; font-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; script-src 'self' https://cdn.jsdelivr.net https://*.posthog.com 'unsafe-eval'; connect-src 'self' https://*.posthog.com; worker-src 'self' blob:; img-src 'self' data:;"
+		Content-Security-Policy "default-src 'self'; font-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; script-src 'self' https://cdn.jsdelivr.net https://*.posthog.com; script-src-elem 'self' 'unsafe-inline'; connect-src 'self' https://*.posthog.com; worker-src 'self' blob:; img-src 'self' data:;"
 		Referrer-Policy "strict-origin-when-cross-origin"
 		X-Content-Type-Options "nosniff"
 		X-Frame-Options "DENY"
