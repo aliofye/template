@@ -8,7 +8,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['dist', 'coverage', 'node-modules'] },
+  { ignores: ['build', 'coverage', 'node-modules', '.react-router'] },
   {
     extends: [
       ...tseslint.configs.strict,
