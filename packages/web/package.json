@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "react-router dev",
     "build": "react-router build",
-    "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
     "compile": "tsc -b --noEmit && tsc-alias",
     "test": "bun test",
