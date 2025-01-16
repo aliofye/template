@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import linkIcon from '@/web/assets/link.svg';
 import classes from './ExampleNavbar.module.css';
 
@@ -13,7 +13,7 @@ const ExampleNavbar = () => {
       <Link to="/docs">Architecture</Link>
       {import.meta.env.DEV && (
         <a
-          href={`${import.meta.env.PUBLIC_WEB_API_URL}/docs`}
+          href={`${import.meta.env.PUBLIC_WEB_API_URL}/v1/docs`}
           target="_blank"
           rel="noreferrer"
         >

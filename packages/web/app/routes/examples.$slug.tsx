@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import ExampleNavbar from '@/web/components/ExampleNavbar';
 
 const SlugExample = () => {
