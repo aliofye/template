@@ -13,8 +13,8 @@
 		reverse_proxy localhost:3000
 	}
 	route /* {
-		# Serve static files from the "dist" directory (Vite's build output)
-		root * packages/web/dist
+		# Serve static files from the "build" directory (Vite's build output)
+		root * packages/web/build
 		# Handle SPA routing by rewriting all paths to index.html
 		try_files {path} /index.html
 		# Static file serving

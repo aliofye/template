@@ -1,18 +1,27 @@
 {
+  "include": [
+    "**/*",
+    "**/.server/**/*",
+    "**/.client/**/*",
+    ".react-router/types/**/*"
+  ],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@/api/*": ["../api/src/*"],
-      "@/web/lib/*": ["src/lib/*"],
-      "@/web/components/*": ["src/components/*"],
-      "@/web/assets/*": ["src/assets/*"],
+      "@/web/lib/*": ["app/lib/*"],
+      "@/web/components/*": ["app/components/*"],
+      "@/web/assets/*": ["app/assets/*"],
+      "@/web/pages/*": ["app/pages/*"],
     },
-    "outDir": "dist",
+    "skipLibCheck": true,
+    "outDir": "build",
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "skipLibCheck": true,
+    "types": ["mdx", "react-dom", "bun", "vite/client"],
+    "rootDirs": [".", "./.react-router/types"],
 
     /* Bundler mode */
     "moduleResolution": "Bundler",
@@ -43,5 +52,4 @@
     "noEmitOnError": true,
     "allowUnreachableCode": false,
   },
-  "include": ["src", "src/lib/hooks", "src/lib/utils/classNames"]
 }

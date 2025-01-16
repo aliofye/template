@@ -4,8 +4,10 @@
   "private": true,
   "description": "Frontend",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "react-router dev",
+    "build": "react-router build",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc",
     "compile": "tsc -b --noEmit && tsc-alias",
     "test": "bun test",
     "test:watch": "bun test --watch",
@@ -16,19 +18,24 @@
     "lint:fix": "eslint --fix . && stylelint --fix **/*.css"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^7.1.0"
+    "@react-router/fs-routes": "^7.1.2",
+    "@react-router/node": "^7.1.2",
+    "@react-router/serve": "^7.1.2",
+    "isbot": "^5.1.21",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.1.2"
   },
   "devDependencies": {
     "@happy-dom/global-registrator": "^15.11.7",
     "@mdx-js/rollup": "^3.1.0",
+    "@react-router/dev": "^7.1.1",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react-swc": "^3.5.0",
+    "@types/node": "^20",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",

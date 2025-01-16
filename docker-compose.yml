@@ -42,7 +42,7 @@ services:
           target: /app/packages/web
           ignore:
             - node_modules/
-            - dist/
+            - build/
     ports:
       - 5173:5173
       - 3000:3000
@@ -77,7 +77,7 @@ services:
           target: /app/packages/web
           ignore:
             - node_modules/
-            - dist/
+            - build/
     ports:
       - 5173:443
     environment:

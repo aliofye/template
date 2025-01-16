@@ -35,7 +35,7 @@ export const useQuery = <T>(
   fetcher: () => Promise<T>,
   options?: Options,
 ): Query<T> => {
-  const ref = useRef<() => Promise<T>>();
+  const ref = useRef<() => Promise<T>>(null);
 
   const [status, setStatus] = useState<'stale' | 'loading' | 'error' | 'done'>('stale');
   const [data, setData] = useState<T>();
