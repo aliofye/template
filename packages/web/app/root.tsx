@@ -7,6 +7,7 @@ import {
   ScrollRestoration,
 } from 'react-router';
 
+import ExampleNavbar from '@/web/components/ExampleNavbar';
 import type { Route } from './+types/root';
 import stylesheet from './app.css?url';
 
@@ -34,7 +35,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta property="og:locale" content="en_US" />
         <meta property="og:url" content="https://AddYourWebsite.com" />
         <meta property="og:description" content="Add Description" />
-        <meta property="og:image" content="./src/assets/react.svg" />
+        <meta property="og:image" content="./app/assets/react.svg" />
         <title>Add Description</title>
         <Meta />
         <Links />
@@ -49,7 +50,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div>
+      <ExampleNavbar />
+      <Outlet />
+    </div>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

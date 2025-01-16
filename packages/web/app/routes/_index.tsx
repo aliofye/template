@@ -1,17 +1,12 @@
-import ExampleNavbar from '@/web/components/ExampleNavbar';
-
-const Main = () => {
+const HelloWorld = () => {
   return (
-    <div>
-      <ExampleNavbar />
-      <div className="content">
-        <h1 className="gradient">Hello World</h1>
-        <p>
-          Edit <code>src/pages/Main.tsx</code> and save to test HMR
-        </p>
-      </div>
+    <div className="content">
+      <h1 className="gradient">Hello World</h1>
+      <p>
+        Edit <code>app/routes/_index.tsx</code> and save to test HMR
+      </p>
     </div>
   );
 };
 
-export default Main;
+export default HelloWorld;
