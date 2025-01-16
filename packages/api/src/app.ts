@@ -59,7 +59,7 @@ if (process.env.NODE_ENV === 'development') {
     apiReference({
       theme: 'saturn',
       spec: {
-        url: '/openapi',
+        url: '/v1/openapi',
       },
     }),
   );
