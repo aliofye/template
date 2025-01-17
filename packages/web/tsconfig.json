@@ -12,7 +12,6 @@
       "@/web/lib/*": ["app/lib/*"],
       "@/web/components/*": ["app/components/*"],
       "@/web/assets/*": ["app/assets/*"],
-      "@/web/pages/*": ["app/pages/*"],
     },
     "skipLibCheck": true,
     "outDir": "build",

@@ -1,13 +1,11 @@
 import ExampleCodeBlock from '@/web/components/ExampleCodeBlock';
-import { useQuery } from '@/web/lib/hooks/useQuery';
 
-import { getMessage } from './Example.queries';
+interface ExampleProps {
+  message: string;
+}
 
-const Example = () => {
-  const getMessageQuery = useQuery('message', getMessage);
-
-  if (getMessageQuery.loading) return <></>;
-  if (getMessageQuery.error)
+const Example: React.FC<ExampleProps> = ({ message }) => {
+  if (!message)
     return (
       <div className="fade-transition">
         <div className="gradient">
@@ -23,7 +21,7 @@ const Example = () => {
   return (
     <div className="gradient fade-transition">
       <ExampleCodeBlock text={curlCommand} />
-      <p>{getMessageQuery.data ? getMessageQuery.data.text : getMessageQuery.error}</p>
+      <p>{message}</p>
     </div>
   );
 };
