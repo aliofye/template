@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "react-router dev",
     "build": "react-router build",
-    "typecheck": "react-router typegen && tsc",
-    "compile": "tsc -b --noEmit && tsc-alias",
+    "compile": "react-router typegen && tsc -b --noEmit && tsc-alias",
     "test": "bun test",
     "test:watch": "bun test --watch",
     "test:bail": "bun test --bail",
