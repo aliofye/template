@@ -49,7 +49,6 @@ export default tseslint.config(
       ],
       ...reactHooks.configs.recommended.rules,
       ...jsxa11y.configs.recommended.rules,
-      ...prettier.configs.recommended.rules,
       'import/no-unresolved': 'off',
       'import/order': [
         'warn',
@@ -69,6 +68,8 @@ export default tseslint.config(
           },
         },
       ],
+      'func-style': ['error', 'expression', { allowArrowFunctions: true }],
+      ...prettier.configs.recommended.rules,
       'prettier/prettier': [
         'warn',
         {

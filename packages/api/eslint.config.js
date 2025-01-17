@@ -44,6 +44,7 @@ export default tseslint.config(
           },
         },
       ],
+      'func-style': ['error', 'expression', { allowArrowFunctions: true }],
       ...prettier.configs.recommended.rules,
       'prettier/prettier': [
         'warn',
