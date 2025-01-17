@@ -11,8 +11,8 @@ const SlugExample = () => {
         <span className="gradient"> {slug}</span>.
       </p>
       <p className="gradient fade-transition">
-        Try to adjust the url from <code>/slug-example/slug</code> to{' '}
-        <code>/slug-example/hello</code>
+        Try to adjust the url from <code>/examples/slug</code> to{' '}
+        <code>/examples/hello</code>
       </p>
     </div>
   );
