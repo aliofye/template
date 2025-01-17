@@ -1,9 +1,17 @@
 {
 	# Global options block
 	admin off # Disable the admin interface
-	auto_https off # Disable automatic HTTPS in favor of Railway's managed SSL
-	log {
+	auto_https off # Disable automatic HTTPS in favor of your hosting managed SSL
+	log file {
+		output file /var/log/caddy/caddy.log {
+			roll_local_time
+			roll_size 10MiB
+			roll_keep 10
+		}
+	}
+	log console {
 		output stdout
+		format console
 	}
 }
 
@@ -17,12 +25,11 @@
 		root * packages/web/build/client
 		# Handle SPA routing by rewriting all paths to index.html
 		try_files {path} /index.html
+		# Enable gzip and zstd compression
+		encode gzip zstd
 		# Static file serving
 		file_server
 	}
-
-	# Enable gzip and zstd compression
-	encode gzip zstd
 
 	# Cache static assets with long cache durations
 	header Cache-Control "public, max-age=31536000, immutable"
