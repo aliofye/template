@@ -1,6 +1,6 @@
 [![CI Pipeline](https://github.com/aliofye/template/actions/workflows/main.yml/badge.svg?branch=github-actions)](https://github.com/aliofye/template/actions/workflows/main.yml)
 
-# React + Vite + Hono + Drizzle + Bun + Docker = ❤️
+# React<sup>19</sup> + React Router<sup>7</sup> + Vite + Hono + Drizzle + Bun + Docker = ❤️
 
 > \>_ Out there, it’s so breathtaking, isn’t it?
 
@@ -21,6 +21,11 @@
 ### Install dependencies
 ```bash
 bun install
+```
+
+### Compile for typegen
+```bash
+bun run compile
 ```
 
 ### Install git hooks
