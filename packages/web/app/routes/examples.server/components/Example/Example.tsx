@@ -1,7 +1,7 @@
 import ExampleCodeBlock from '@/web/components/ExampleCodeBlock';
 
 interface ExampleProps {
-  message: string;
+  message: string | null;
 }
 
 const Example: React.FC<ExampleProps> = ({ message }) => {

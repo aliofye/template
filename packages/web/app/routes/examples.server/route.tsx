@@ -3,12 +3,17 @@ import Example from './components/Example';
 import { getMessage } from './loaders';
 
 export const clientLoader = async () => {
-  const data = await getMessage();
-  return data;
+  try {
+    const { text } = await getMessage();
+    return text;
+  } catch (err) {
+    console.error('Error loading data:', err);
+    return null;
+  }
 };
 
 const ServerExample = ({ loaderData }: Route.ComponentProps) => {
-  const { text } = loaderData;
+  const text = loaderData;
 
   return (
     <div className="content">
