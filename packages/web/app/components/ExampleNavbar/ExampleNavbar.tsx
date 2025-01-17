@@ -10,7 +10,7 @@ const ExampleNavbar = () => {
       <NavLink to="/examples/nested">NestedExample</NavLink>
       <NavLink to="/examples/slug">SlugExample</NavLink>
       <NavLink to="/non-existing-route">InvalidRoute</NavLink>
-      <NavLink to="/docs">Architecture</NavLink>
+      <NavLink to="/architecture">Architecture</NavLink>
       {import.meta.env.DEV && (
         <a
           href={`${import.meta.env.PUBLIC_WEB_API_URL}/v1/docs`}
