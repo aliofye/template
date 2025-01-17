@@ -16,7 +16,7 @@ export default tseslint.config(
       imports.flatConfigs.recommended,
       imports.flatConfigs.typescript,
     ],
-    files: ['**/*.{ts,tsx,js}'],
+    files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -33,7 +33,20 @@ export default tseslint.config(
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/jsx-no-target-blank': 'off',
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      'react-refresh/only-export-components': [
+        'error',
+        {
+          allowExportNames: [
+            'meta',
+            'links',
+            'headers',
+            'loader',
+            'clientLoader',
+            'action',
+            'clientAction',
+          ],
+        },
+      ],
       ...reactHooks.configs.recommended.rules,
       ...jsxa11y.configs.recommended.rules,
       ...prettier.configs.recommended.rules,

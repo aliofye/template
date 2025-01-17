@@ -4,6 +4,6 @@ import Example from '../Example';
 
 describe('Example', () => {
   it('Renders the component', () => {
-    render(<Example />);
+    render(<Example message={'This is a message!'} />);
   });
 });
