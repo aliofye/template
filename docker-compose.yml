@@ -35,7 +35,7 @@ services:
           target: /app/packages/api
           ignore:
             - node_modules/
-            - dist/
+            - build/
             - migrations/
         - action: sync
           path: ./packages/web
@@ -70,7 +70,7 @@ services:
           target: /app/packages/api
           ignore:
             - node_modules/
-            - dist/
+            - build/
             - migrations/
         - action: rebuild
           path: ./packages/web

@@ -2,9 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/api/lib/*": ["src/lib/*"]
+      "@/api/lib/*": ["app/lib/*"]
     },
-    "outDir": "dist",
+    "outDir": "build",
     // Enable latest features
     "lib": ["ESNext", "DOM"],
     "target": "ESNext",
