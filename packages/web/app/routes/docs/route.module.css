@@ -1,5 +1,4 @@
 .scrollContainer {
-  overflow-x: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,6 +32,10 @@
 
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.logo.router:hover {
+  filter: drop-shadow(0 0 2em #ff2c2caa);
 }
 
 .logo.vite:hover {
@@ -78,9 +81,5 @@
 @media screen and (max-width: 768px) {
   .scrollContainer {
     flex-direction: column;
-  }
-
-  .docsContainer {
-    width: 80vw;
   }
 }

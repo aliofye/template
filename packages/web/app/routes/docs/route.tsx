@@ -3,11 +3,12 @@ import dockerLogo from '@/web/assets/docker.svg';
 import drizzleLogo from '@/web/assets/drizzle.svg';
 import honoLogo from '@/web/assets/hono.svg';
 import reactLogo from '@/web/assets/react.svg';
+import routerLogo from '@/web/assets/router.svg';
 import viteLogo from '@/web/assets/vite.svg';
 import classNames from '@/web/lib/utils/classNames';
 
 import Markdown from './components/Docs.mdx';
-import classes from './components/Docs.module.css';
+import classes from './route.module.css';
 
 const Docs = () => {
   return (
@@ -18,6 +19,13 @@ const Docs = () => {
             src={reactLogo}
             className={classNames(classes.logo, classes.react)}
             alt="React logo"
+          />
+        </a>
+        <a href="https://reactrouter.com/start/home" target="_blank">
+          <img
+            src={routerLogo}
+            className={classNames(classes.logo, classes.router)}
+            alt="React React logo"
           />
         </a>
         <a href="https://vite.dev" target="_blank">
