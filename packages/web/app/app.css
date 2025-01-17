@@ -1,9 +1,4 @@
 body {
-  overflow-x: hidden;
-
-  width: 100vw;
-  height: 100vh;
-
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
