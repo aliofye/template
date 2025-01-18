@@ -1,7 +1,13 @@
 [![CI Pipeline](https://github.com/aliofye/template/actions/workflows/main.yml/badge.svg?branch=github-actions)](https://github.com/aliofye/template/actions/workflows/main.yml)
 [![CodeQL](https://github.com/aliofye/template/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/aliofye/template/actions/workflows/github-code-scanning/codeql)
 
-# React<sup>19</sup> + React Router<sup>7</sup> + Vite + Hono + Drizzle + Bun + Docker = ❤️
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
+# React<sup>19</sup> + React Router<sup>7</sup> + Vite + Bun + Docker = ❤️
 
 > \>_ Out there, it’s so breathtaking, isn’t it?
 
