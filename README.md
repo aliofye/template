@@ -1,4 +1,5 @@
 [![CI Pipeline](https://github.com/aliofye/template/actions/workflows/main.yml/badge.svg?branch=github-actions)](https://github.com/aliofye/template/actions/workflows/main.yml)
+[![CodeQL](https://github.com/aliofye/template/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/aliofye/template/actions/workflows/github-code-scanning/codeql)
 
 # React<sup>19</sup> + React Router<sup>7</sup> + Vite + Hono + Drizzle + Bun + Docker = ❤️
 
