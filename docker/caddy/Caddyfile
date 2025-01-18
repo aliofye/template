@@ -37,7 +37,7 @@
 	# Add security headers
 	header {
 		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-		Content-Security-Policy "default-src 'self'; font-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; script-src 'self' https://cdn.jsdelivr.net https://*.posthog.com; script-src-elem 'self' 'unsafe-inline'; connect-src 'self' https://*.posthog.com; worker-src 'self' blob:; img-src 'self' data:;"
+		Content-Security-Policy "default-src 'self'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; script-src-elem 'self' 'unsafe-inline'; connect-src 'self'; worker-src 'self' blob:; img-src 'self' data:;"
 		Referrer-Policy "strict-origin-when-cross-origin"
 		X-Content-Type-Options "nosniff"
 		X-Frame-Options "DENY"
