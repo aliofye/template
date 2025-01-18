@@ -27,7 +27,7 @@ services:
   dev:
     build:
       context: .
-      dockerfile: .docker/Dockerfile.dev
+      dockerfile: docker/Dockerfile.dev
     develop:
       watch:
         - action: sync
@@ -57,13 +57,13 @@ services:
   prod:
     build:
       context: .
-      dockerfile: .docker/Dockerfile.prod
+      dockerfile: docker/Dockerfile.prod
       args:
         PUBLIC_WEB_API_URL: http://localhost:5173/api
     develop:
       watch:
         - action: sync+restart
-          path: .docker/caddy/Caddyfile
+          path: docker/caddy/Caddyfile
           target: /etc/caddy/Caddyfile
         - action: sync+restart
           path: ./packages/api

@@ -18,8 +18,8 @@ RUN bun install
 RUN bun run build
 
 # Copy entrypoint script and set permissions
-COPY .docker/scripts/wait-for-it.sh /app/scripts/wait-for-it.sh
-COPY .docker/scripts/dev-entrypoint.sh /app/scripts/dev-entrypoint.sh
+COPY docker/scripts/wait-for-it.sh /app/scripts/wait-for-it.sh
+COPY docker/scripts/dev-entrypoint.sh /app/scripts/dev-entrypoint.sh
 RUN chmod +x /app/scripts/wait-for-it.sh
 RUN chmod +x /app/scripts/dev-entrypoint.sh
 

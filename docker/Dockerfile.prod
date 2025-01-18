@@ -28,11 +28,11 @@ RUN curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | t
 RUN apt-get update && apt-get install -y caddy
 
 # Copy the Caddyfile into the container and format it
-COPY .docker/caddy/Caddyfile /etc/caddy/Caddyfile
+COPY docker/caddy/Caddyfile /etc/caddy/Caddyfile
 
 # Copy entrypoint script and set permissions
-COPY .docker/scripts/wait-for-it.sh /app/scripts/wait-for-it.sh
-COPY .docker/scripts/prod-entrypoint.sh /app/scripts/prod-entrypoint.sh
+COPY docker/scripts/wait-for-it.sh /app/scripts/wait-for-it.sh
+COPY docker/scripts/prod-entrypoint.sh /app/scripts/prod-entrypoint.sh
 RUN chmod +x /app/scripts/wait-for-it.sh
 RUN chmod +x /app/scripts/prod-entrypoint.sh
 
