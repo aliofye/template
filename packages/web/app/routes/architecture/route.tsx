@@ -7,7 +7,7 @@ import routerLogo from '@/web/assets/router.svg';
 import viteLogo from '@/web/assets/vite.svg';
 import classNames from '@/web/lib/utils/classNames';
 
-import Markdown from './components/Docs.mdx';
+import Markdown from './components/Architecture.mdx';
 import classes from './route.module.css';
 
 const Docs = () => {

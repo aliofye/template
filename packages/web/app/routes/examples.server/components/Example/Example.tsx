@@ -12,6 +12,7 @@ const Example: React.FC<ExampleProps> = ({ message }) => {
           Your database is empty. Run the following commands.
         </div>
         <br />
+        <ExampleCodeBlock text={'docker compose exec dev bun run db:generate'} />
         <ExampleCodeBlock text={'docker compose exec dev bun run db:migrate'} />
         <ExampleCodeBlock text={'docker compose exec dev bun run db:seed'} />
       </div>

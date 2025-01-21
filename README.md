@@ -55,9 +55,14 @@ docker compose --profile prod up --watch
 docker compose exec dev bun run db:generate 
 ```
 
-### Migrate and seed your db
+### Migrate your db
 ```bash
-docker compose exec dev bun run db:setup
+docker compose exec dev bun run db:migrate
+```
+
+### Seed your db
+```bash
+docker compose exec dev bun run db:seed
 ```
 
 ## Database helpers
