@@ -9,7 +9,7 @@
 }
 
 .logoContainer {
-  align-content: center;
+  align-content: first baseline;
   padding: 2em;
 }
 
